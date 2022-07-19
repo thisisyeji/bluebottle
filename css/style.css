@@ -59,7 +59,7 @@ section h2 {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  height: 100px;
+  height: 80px;
 }
 #header .inner .wrap .logo img {
   height: 100%;
