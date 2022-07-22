@@ -8,30 +8,51 @@
     <title>Blue bottle</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/63a7468b81.js" crossorigin="anonymous"></script>
-    <script src="main.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/anime.js" defer></script>
 </head>
 
 <body>
     <header id="header">
         <div class="inner">
             <h1 class="hidden">BLUE BOTTLE COFFEE</h1>
-            <div class="wrap">
-                <a href="index.html" class="logo">
-                    <img src="./bbimg/logo.png" alt="logo">
-                </a>
+            <a href="index.html" class="logo">
+                <img src="./bbimg/logo.png" alt="logo">
+            </a>
 
-                <nav class="nav">
-                    <ul class="gnb">
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="community.html">COMMUNITY</a></li>
-                        <li><a href="gallery.html">GALLERY</a></li>
-                        <li><a href="youtube.html">YOUTUBE</a></li>
-                        <li><a href="location.html">LOCATION</a></li>
-                        <li><a href="location.html">JOIN</a></li>
-                    </ul>
+            <nav class="nav_web">
+                <ul class="gnb">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="community.html">COMMUNITY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                    <li><a href="location.html">JOIN</a></li>
+                </ul>
 
-                </nav>
-            </div>
+            </nav>
+
+            <a href="#" class="btnCall">
+                <span>메뉴호출</span>
+            </a>
+            <nav class="nav_mobile">
+                <h1>
+                    <a href="index.html" class="logo">
+                        <img src="./bbimg/logo.png" alt="logo">
+                    </a>
+                    <span class="hidden">BLUE BOTTLE COFFEE</span>
+                </h1>
+
+                <ul class="gnb">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="community.html">COMMUNITY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="youtube.html">YOUTUBE</a></li>
+                    <li><a href="location.html">LOCATION</a></li>
+                    <li><a href="location.html">JOIN</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -55,7 +76,7 @@
                     <div class="desc">
                         <p>Raspberry, chocolate, molasses</p>
                         <h2>Spring Seasonal Blend</h2>
-                        <a href="#">MORE</a>
+                        <a href="https://youtu.be/AaqJyGc5iqU">MORE</a>
                     </div>
                 </article>
 
@@ -69,7 +90,7 @@
                     <div class="desc">
                         <p>Taste your coffee at its best.</p>
                         <h2>The Blue Bottle Dripper</h2>
-                        <a href="#">MORE</a>
+                        <a href="https://youtu.be/QWOsAvnHk3s">MORE</a>
                     </div>
                 </article>
             </div>
@@ -217,7 +238,37 @@
     <section id="social">
         <div class="inner">
             <h1>@Bluebottle</h1>
-            <article class="pictures"></article>
+            <article class="img_frame">
+                <div class="slider">
+                    <ul>
+                        <li>
+                            <div><img src="./bbimg/pic1.jpeg" alt="insta_image1"></div>
+                            <div><img src="./bbimg/pic2.jpeg" alt="insta_image2"></div>
+                            <div><img src="./bbimg/pic3.jpeg" alt="insta_image3"></div>
+                            <div><img src="./bbimg/pic4.jpeg" alt="insta_image4"></div>
+                        </li>
+                        <li>
+                            <div><img src="./bbimg/pic5.jpeg" alt="insta_image5"></div>
+                            <div><img src="./bbimg/pic6.jpeg" alt="insta_image6"></div>
+                            <div><img src="./bbimg/pic7.jpeg" alt="insta_image7"></div>
+                            <div><img src="./bbimg/pic8.jpeg" alt="insta_image8"></div>
+                        </li>
+                        <li>
+                            <div><img src="./bbimg/pic9.jpeg" alt="insta_image9"></div>
+                            <div><img src="./bbimg/pic10.jpg" alt="insta_image10"></div>
+                            <div><img src="./bbimg/pic11.jpeg" alt="insta_image11"></div>
+                            <div><img src="./bbimg/pic12.jpeg" alt="insta_image12"></div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <a href="#" class="prev">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            <a href="#" class="next">
+                <i class="fas fa-angle-right"></i>
+            </a>
         </div>
     </section>
 
