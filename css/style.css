@@ -24,6 +24,7 @@ a {
 section {
   padding: 50px 0;
   margin: 200px 0;
+  overflow-x: hidden;
 }
 section:hover h1 {
   text-shadow: 7px 7px 0 rgba(0, 168, 224, 0.5);
@@ -47,6 +48,7 @@ section h2 {
 #header {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 #header .inner {
   width: 1180px;
@@ -62,6 +64,9 @@ section h2 {
   left: 50%;
   transform: translateX(-50%);
   height: 80px;
+}
+#header .inner .logo:hover img {
+  transform: rotateY(180deg);
 }
 #header .inner .logo img {
   height: 100%;
@@ -221,6 +226,7 @@ section h2 {
   width: 100%;
   height: calc(100vh - 200px);
   margin-bottom: 150px;
+  overflow-x: hidden;
 }
 #figure .inner {
   width: 90%;
@@ -803,6 +809,7 @@ section h2 {
   }
   /*--figure--*/
   #figure {
+    width: 100%;
     margin-bottom: 100px;
   }
   #figure .inner {
@@ -956,6 +963,9 @@ section h2 {
   #subscription .inner h1 {
     font-size: 8vmin;
   }
+  #subscription .inner h1 img {
+    height: 90px;
+  }
   #subscription .inner .wrap .right div h3 {
     font-size: 3.5vmin;
   }
@@ -1033,7 +1043,7 @@ section h2 {
   /*--figure--*/
   #figure {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     margin-bottom: 50px;
   }
   #figure .inner {
@@ -1046,7 +1056,7 @@ section h2 {
   #figure .inner h1 {
     font-size: 32px;
     position: absolute;
-    top: 30%;
+    top: 40%;
   }
   /*---product--*/
   #product {
@@ -1072,6 +1082,9 @@ section h2 {
   /*--subscription--*/
   #subscription .inner h1 {
     font-size: 45px;
+  }
+  #subscription .inner h1 img {
+    height: 70px;
   }
   #subscription .inner .wrap .left {
     width: 100%;
@@ -1099,11 +1112,9 @@ section h2 {
   }
   /*--social--*/
   #social {
-    height: 60vh;
+    height: 70vh;
+    padding-bottom: 100px;
     /*---footer---*/
-  }
-  #social .inner {
-    padding-bottom: 50px;
   }
   #social .inner h1 {
     font-size: 40px;
@@ -1155,7 +1166,7 @@ section h2 {
   }
   #footer .inner .wrap p {
     width: 100%;
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
     bottom: -30px;
   }
