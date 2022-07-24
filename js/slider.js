@@ -2,13 +2,21 @@ const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const slider = document.querySelector(".img_slider");
 const ul = slider.querySelector("ul");
-let winWid = window.innerWidth;
+const social = document.querySelector("#social");
+let wid = parseFloat(getComputedStyle(social).width);
 let left = parseFloat(getComputedStyle(ul).left);
-let per = (left / winWid) * 100;
+let per = (left / wid) * 100;
+
 
 ul.style.left = per + "%";
 
 console.log(per);
+
+// window.addEventListener("resize", () => {
+//     let wid = parseFloat(getComputedStyle(social).width);
+//     let left = parseFloat(getComputedStyle(ul).left);
+//     let per = (left / wid) * 100;
+// })
 
 
 next.addEventListener("click", (e) => {
