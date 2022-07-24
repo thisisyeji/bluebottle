@@ -1397,6 +1397,8 @@ section {
 	/*--social--*/
 	#social {
 		height: 70vh;
+		border-bottom-left-radius: 70px;
+		border-bottom-right-radius: 70px;
 		padding-bottom: 100px;
 		.inner {
 			h1 {
