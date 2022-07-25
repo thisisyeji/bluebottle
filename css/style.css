@@ -186,24 +186,22 @@ section h2 {
   top: 0;
 }
 #header_sub .inner .nav_mobile .gnb li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  padding: 3vmin 0;
   border-bottom: 1px solid #efefef;
   transition: 1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 #header_sub .inner .nav_mobile .gnb li a {
+  display: block;
+  width: 100%;
+  height: 80px;
   color: #999;
   text-shadow: 1px 1px 0 #ddd;
   font-weight: 300;
   font-size: 4vmin;
   letter-spacing: 1px;
   transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #header_sub .inner .nav_mobile .gnb li:hover {
   background-color: #fff;
@@ -356,7 +354,6 @@ section h2 {
     width: 100%;
     height: 80px;
     /*-----------메뉴 호출-----------------*/
-    /*--mobile--*/
   }
   #header_sub .inner .logo {
     height: 50px;
@@ -372,13 +369,9 @@ section h2 {
   #header_sub .inner .btnCall {
     display: block;
   }
-  #header_sub .inner .nav_mobile .gnb li {
-    padding: 2vmin 0;
-  }
   /*---------------content----------------*/
   .content .sub_visual {
     width: 100%;
-    height: 200px;
   }
   .content .sub_visual h1 {
     font-size: 7vmin;
@@ -1046,24 +1039,22 @@ section h2 {
   top: 0;
 }
 #header .inner .nav_mobile .gnb li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  padding: 3vmin 0;
   border-bottom: 1px solid #efefef;
   transition: 1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 #header .inner .nav_mobile .gnb li a {
+  display: block;
+  width: 100%;
+  height: 80px;
   color: #999;
   text-shadow: 1px 1px 0 #ddd;
   font-weight: 300;
   font-size: 4vmin;
   letter-spacing: 1px;
   transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #header .inner .nav_mobile .gnb li:hover {
   background-color: #fff;
@@ -1645,7 +1636,6 @@ section h2 {
     width: 100%;
     height: 80px;
     /*-----------메뉴 호출-----------------*/
-    /*--mobile--*/
   }
   #header .inner .logo {
     height: 50px;
@@ -1660,9 +1650,6 @@ section h2 {
   }
   #header .inner .btnCall {
     display: block;
-  }
-  #header .inner .nav_mobile .gnb li {
-    padding: 2vmin 0;
   }
   /*--figure--*/
   #figure {
@@ -1986,20 +1973,32 @@ section h2 {
     margin: 15% 5px;
   }
   /*---footer---*/
-  #footer .inner .wrap h1 {
-    font-size: 20px;
+  #footer {
+    height: 100%;
+    padding: 100px 20px 50px;
   }
-  #footer .inner .wrap h1 span strong {
-    font-size: 28px;
-  }
-  #footer .inner .wrap .footer_right .policy {
-    font-size: 14px;
-  }
-  #footer .inner .wrap .footer_right .contact {
+  #footer .inner .wrap {
     flex-direction: column;
   }
-  #footer .inner .wrap .footer_right .contact li {
-    margin-bottom: 5px;
+  #footer .inner .wrap h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #footer .inner .wrap h1 svg {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  #footer .inner .wrap h1 span strong {
+    font-size: 24px;
+  }
+  #footer .inner .wrap .footer_right .policy {
+    margin-right: 70px;
+  }
+  #footer .inner .wrap p {
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    bottom: -30px;
   }
 }
 

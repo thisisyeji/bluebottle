@@ -6,4 +6,12 @@ btnCall.addEventListener("click", (e) => {
 
     btnCall.classList.toggle("on");
     navMobile.classList.toggle("on");
+
+    const callOn = btnCall.classList.contains("on");
+    if (callOn) {
+        btnCall.style.position = "fixed";
+        btnCall.style.top = "40px";
+    } else {
+        btnCall.style.position = "absolute";
+    }
 })

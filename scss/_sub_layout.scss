@@ -201,25 +201,23 @@ section {
 
 			.gnb {
 				li {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					height: 80px;
-					padding: 3vmin 0;
 					border-bottom: 1px solid #efefef;
 					transition: 1s;
 
-					display: flex;
-					justify-content: center;
-					align-items: center;
-
 					a {
+						display: block;
+						width: 100%;
+						height: 80px;
 						color: #999;
 						text-shadow: 1px 1px 0 #ddd;
 						font-weight: 300;
 						font-size: 4vmin;
 						letter-spacing: 1px;
 						transition: 0.5s;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
 					}
 
 					&:hover {
@@ -421,14 +419,6 @@ section {
 			.btnCall {
 				display: block;
 			}
-			/*--mobile--*/
-			.nav_mobile {
-				.gnb {
-					li {
-						padding: 2vmin 0;
-					}
-				}
-			}
 		}
 	}
 
@@ -436,7 +426,6 @@ section {
 	.content {
 		.sub_visual {
 			width: 100%;
-			height: 200px;
 
 			h1 {
 				font-size: 7vmin;

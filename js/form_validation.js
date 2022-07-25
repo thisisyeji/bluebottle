@@ -127,7 +127,7 @@ function isPwd(name1, name2, len) {
 
         const errMsg = document.createElement("p");
         errMsg.classList.add("errMsg");
-        errMsg.append(`Must be minimum ${len} characters long and include at least one number, one special character and one letter.`);
+        errMsg.append(`Must be minimum ${len} characters long and include any number, special character and letter.`);
         pwd1.closest("td").append(errMsg);
 
         return false;
