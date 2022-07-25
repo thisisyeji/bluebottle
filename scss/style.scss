@@ -4,9 +4,10 @@
 @import 'color.scss';
 @import 'sub_layout.scss';
 @import 'join.scss';
+@import 'result.scss';
 
 $tablet: 1179px;
-$mobilebig: 768px;
+$mobileBig: 768px;
 $mobile: 539px;
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,300;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,700&display=swap');
@@ -1092,7 +1093,7 @@ section {
 }
 
 /*---------------mobilebig----------------*/
-@media screen and (max-width: $mobilebig) {
+@media screen and (max-width: $mobileBig) {
 	section {
 		margin-bottom: 100px 0;
 		padding: 30px 0;

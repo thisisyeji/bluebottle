@@ -58,28 +58,31 @@
 
     <section class="content join">
         <div class="sub_visual">
+            <h1>Join</h1>
         </div>
         <div class="inner">
-            <h1>Join</h1>
             <div class="wrap">
+                <p class="welcomeTxt">WELCOME!</p>
+
                 <div class="logo">
                     <img src="./bbimg/logo.png" alt="logo">
                 </div>
-                <p class="welcomeTxt">WELCOME !</p>
-                <form action="#" method="get" id="member">
+
+                <form action="result.html" method="get" id="member">
                     <fieldset>
                         <legend class="hidden">register form</legend>
 
-                        <h2><label for="agree">Terms and Policy</label></h2>
-                        <textarea name="terms" id="terms" cols="30" rows="10">
-    1. Terms
+                        <h2><label for="agree">Terms & Policies</label></h2>
+                        <textarea name="terms" id="terms" cols="30" rows="10" disabled>
+    1. Terms of Service
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum non facere neque possimus id eligendi veritatis magnam illum, assumenda, ab nam mollitia voluptates quos dolore. Quaerat officia consectetur, dolorem ex voluptatibus ratione, ipsam vero exercitationem atque, maxime tenetur? Nam veritatis non, dolore doloremque maiores voluptatum pariatur soluta aut necessitatibus iure.
 
 
-    2. Policy
+    2. Policies
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsa eligendi ad totam officiis nesciunt, provident nulla alias nemo magnam magni reprehenderit velit, incidunt similique libero quod voluptatibus sequi a. Reiciendis rerum minus obcaecati repellat laborum consequatur modi! Saepe, obcaecati.
 
-                                                                                        - BLUE BOTTLE COFFEE Inc.
+
+- BLUE BOTTLE COFFEE Inc.
                         </textarea>
 
                         <div class="agreement">
@@ -107,7 +110,8 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsa eligendi ad t
                             <tr>
                                 <th scope="row"><label for="pwd2">Confirm Password</label></th>
                                 <td>
-                                    <input type="password" name="pwd2" id="pwd2" placeholder="Enter your Password.">
+                                    <input type="password" name="pwd2" id="pwd2"
+                                        placeholder="Enter the same Password again.">
                                 </td>
                             </tr>
 
@@ -137,30 +141,30 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsa eligendi ad t
                             <tr>
                                 <th scope="row">Coffee</th>
                                 <td>
-                                    <p class="coffeeTxt">Choose your favorite coffee.</p>
+                                    <p class="coffeeTxt">Choose all your favorite coffee.</p>
                                     <label for="espresso">
-                                        <input type="checkbox" name="espresso" id="espresso" value="espresso">Espresso
+                                        <input type="checkbox" name="coffee" id="espresso" value="espresso">Espresso
                                     </label>
                                     <label for="coldbrew">
-                                        <input type="checkbox" name="coldbrew" id="coldbrew" value="coldbrew">Cold Brew
+                                        <input type="checkbox" name="coffee" id="coldbrew" value="coldbrew">Cold Brew
                                     </label>
                                     <label for="drip">
-                                        <input type="checkbox" name="drip" id="drip" value="drip">Drip Coffee
+                                        <input type="checkbox" name="coffee" id="drip" value="drip">Drip Coffee
                                     </label>
                                     <label for="decaf">
-                                        <input type="checkbox" name="decaf" id="decaf" value="decaf">Decaffeine
+                                        <input type="checkbox" name="coffee" id="decaf" value="decaf">Decaffeine
                                     </label>
                                 </td>
                             </tr>
 
                             <tr>
                                 <th scope="row">
-                                    <label for="reason">
+                                    <label for="select">
                                         How did you hear about us?
                                     </label>
                                 </th>
                                 <td>
-                                    <select name="reason" id="reason">
+                                    <select name="select" id="select">
                                         <option value="">CHOOSE ONE</option>
                                         <option value="social">Social Media</option>
                                         <option value="search">Search</option>

@@ -4,39 +4,37 @@
 		height: 100%;
 		position: relative;
 
-		h1 {
-			font-size: 70px;
-			margin-bottom: 100px;
-			margin-left: 50px;
-		}
-
 		.wrap {
 			width: 100%;
 			height: 100%;
 
+			position: relative;
 			display: flex;
+			flex-direction: row;
+
+			.welcomeTxt {
+				position: absolute;
+				top: -10%;
+				right: 0;
+				font-size: 100px;
+				color: $blue;
+				font-style: italic;
+				margin-top: 300px;
+				opacity: 0;
+				z-index: -1;
+				transition: 1s;
+			}
 
 			.logo {
 				width: 25%;
+				height: 100%;
 				padding: 50px;
 				margin-top: 10%;
 
 				img {
-					width: 90%;
+					width: 80%;
+					margin: 0 10%;
 				}
-			}
-
-			.welcomeTxt {
-				width: 500px;
-				position: absolute;
-				top: 20%;
-				left: 100%;
-				font-size: 9vmin;
-				color: #00a9e0;
-				font-style: italic;
-				transform: rotate(-90deg);
-				z-index: -1;
-				transition: 1s;
 			}
 
 			#member {
@@ -54,7 +52,7 @@
 					h2 {
 						margin-bottom: 30px;
 						font-size: 50px;
-						opacity: 0.7;
+						opacity: 1;
 						color: $blue;
 						font-style: italic;
 						text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
@@ -64,6 +62,7 @@
 						width: 80%;
 						height: 250px;
 						color: $blue;
+						background: #fff;
 						font-weight: 300;
 						line-height: 1.7;
 						border-radius: 20px;
@@ -143,10 +142,10 @@
 
 						td {
 							width: 65%;
-							padding: 10px 30px;
-							padding-right: 0;
+
 							color: #555;
 							font-weight: 300;
+							padding: 10px 0px 25px 30px;
 
 							input {
 								border: 1px solid #ddd;
@@ -197,6 +196,10 @@
 								font-weight: 300;
 								border-radius: 5px;
 								color: #555;
+
+								&:focus {
+									border: 1px solid $blue;
+								}
 							}
 
 							textarea#comment {
@@ -215,13 +218,226 @@
 							}
 						}
 					}
+
+					.errMsg {
+						font-size: 13px;
+						margin-top: 5px;
+						margin-left: 10px;
+						color: hotpink;
+					}
 				}
 			}
 
 			&:hover {
 				.welcomeTxt {
-					left: 0;
+					top: -24%;
 					text-shadow: 20px 20px 0 #ddd;
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.join {
+		padding-bottom: 0;
+		.inner {
+			.wrap {
+				.logo {
+					width: 20%;
+					padding: 30px;
+					margin-top: 10%;
+
+					img {
+						width: 100%;
+					}
+				}
+
+				.welcomeTxt {
+					top: -10%;
+					right: 0;
+					font-size: 10vmin;
+				}
+
+				#member {
+					width: 80%;
+
+					fieldset {
+						h2 {
+							margin-bottom: 20px;
+							font-size: 40px;
+						}
+
+						#terms {
+							width: 90%;
+							height: 200px;
+							margin-bottom: 10px;
+						}
+
+						.agreement {
+							margin-bottom: 30px;
+							font-size: 14px;
+						}
+
+						table {
+							padding: 20px;
+
+							th {
+								padding: 10px 20px;
+								padding-left: 0;
+								font-size: 14px;
+
+								&:last-child {
+									padding: 30px;
+
+									input {
+										font-size: 14px;
+									}
+								}
+							}
+
+							td {
+								padding: 10px 0px 20px 20px;
+								font-size: 14px;
+
+								[type='text'],
+								[type='password'] {
+									width: 100%;
+									height: 35px;
+								}
+
+								[type='email'] {
+									width: 100%;
+									height: 35px;
+								}
+								select {
+									width: 100%;
+									height: 35px;
+								}
+
+								textarea#comment {
+									width: 100%;
+									height: 100px;
+								}
+							}
+						}
+
+						.errMsg {
+							font-size: 12px;
+						}
+					}
+				}
+
+				&:hover {
+					.welcomeTxt {
+						top: -28%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobileBig) {
+	.join {
+		.inner {
+			.wrap {
+				.logo {
+					display: none;
+				}
+
+				.welcomeTxt {
+					top: -10%;
+					right: 0;
+					font-size: 10vmin;
+				}
+
+				#member {
+					width: 95%;
+					margin-left: 5%;
+					padding: 30px;
+
+					fieldset {
+						h2 {
+							font-size: 32px;
+						}
+
+						table {
+							padding: 10px;
+
+							th {
+								padding: 10px;
+							}
+						}
+					}
+				}
+
+				&:hover {
+					.welcomeTxt {
+						top: -29%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.join {
+		.inner {
+			.wrap {
+				.logo {
+					display: none;
+				}
+
+				.welcomeTxt {
+					top: -10%;
+					right: 0;
+					font-size: 10vmin;
+				}
+
+				#member {
+					width: 100%;
+					margin-left: 0;
+					padding: 30px 20px;
+
+					fieldset {
+						h2 {
+							font-size: 28px;
+						}
+
+						#terms {
+							padding: 10px 20px;
+						}
+
+						table {
+							padding: 0;
+
+							th {
+								padding: 10px 0;
+
+								&:last-child {
+									padding: 30px;
+
+									input {
+										width: 80px;
+										height: 30px;
+									}
+								}
+
+								td {
+									padding: 10px 0;
+								}
+							}
+						}
+					}
+
+					&:hover {
+						.welcomeTxt {
+							top: -25%;
+						}
+					}
 				}
 			}
 		}
