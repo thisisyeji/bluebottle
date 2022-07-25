@@ -537,6 +537,19 @@ section {
 		padding: 0;
 	}
 
+	/*--header--*/
+	#header {
+		.inner {
+			.nav_mobile {
+				.gnb {
+					li a {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+
 	/*--content---*/
 	.content {
 		.sub_visual {
