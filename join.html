@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/63a7468b81.js" crossorigin="anonymous"></script>
     <script src="js/main.js" defer></script>
-    <script src="js/slider.js" defer></script>
     <script src="js/anime.js" defer></script>
+    <script src="js/form_validation.js" defer></script>
 </head>
 
 <body>
@@ -56,13 +56,145 @@
         </div>
     </header>
 
-    <section class="content">
+    <section class="content join">
         <div class="sub_visual">
-            <h1>Join</h1>
         </div>
         <div class="inner">
-            <h2>Sub Title <span>서브페이지 제목</span></h2>
-            <!-- 컨텐츠 들어가는 부분 -->
+            <h1>Join</h1>
+            <div class="wrap">
+                <div class="logo">
+                    <img src="./bbimg/logo.png" alt="logo">
+                </div>
+                <p class="welcomeTxt">WELCOME !</p>
+                <form action="#" method="get" id="member">
+                    <fieldset>
+                        <legend class="hidden">register form</legend>
+
+                        <h2><label for="agree">Terms and Policy</label></h2>
+                        <textarea name="terms" id="terms" cols="30" rows="10">
+    1. Terms
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum non facere neque possimus id eligendi veritatis magnam illum, assumenda, ab nam mollitia voluptates quos dolore. Quaerat officia consectetur, dolorem ex voluptatibus ratione, ipsam vero exercitationem atque, maxime tenetur? Nam veritatis non, dolore doloremque maiores voluptatum pariatur soluta aut necessitatibus iure.
+
+
+    2. Policy
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsa eligendi ad totam officiis nesciunt, provident nulla alias nemo magnam magni reprehenderit velit, incidunt similique libero quod voluptatibus sequi a. Reiciendis rerum minus obcaecati repellat laborum consequatur modi! Saepe, obcaecati.
+
+                                                                                        - BLUE BOTTLE COFFEE Inc.
+                        </textarea>
+
+                        <div class="agreement">
+                            <input type="checkbox" name="agree" id="agree">
+                            <label for="agree">I agree.</label>
+                        </div>
+
+                        <h2>Sign Up for an Account</h2>
+                        <table>
+                            <caption class="hidden">register form</caption>
+                            <tr>
+                                <th scope="row"><label for="id">User ID</label></th>
+                                <td>
+                                    <input type="text" name="id" id="id" placeholder="Enter your ID.">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row"><label for="pwd1">Password</label></th>
+                                <td>
+                                    <input type="password" name="pwd1" id="pwd1" placeholder="Enter your Password.">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row"><label for="pwd2">Confirm Password</label></th>
+                                <td>
+                                    <input type="password" name="pwd2" id="pwd2" placeholder="Enter your Password.">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Gender</th>
+                                <td>
+                                    <p class="genderTxt">Choose your gender.</p>
+                                    <label for="male">
+                                        <input type="radio" name="gender" id="male">Male
+                                    </label>
+                                    <label for="female">
+                                        <input type="radio" name="gender" id="female">Female
+                                    </label>
+                                    <label for="other">
+                                        <input type="radio" name="gender" id="other">I prefer not to say
+                                    </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row"><label for="email">E-mail</label></th>
+                                <td>
+                                    <input type="email" name="email" id="email" placeholder="Enter your E-mail.">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">Coffee</th>
+                                <td>
+                                    <p class="coffeeTxt">Choose your favorite coffee.</p>
+                                    <label for="espresso">
+                                        <input type="checkbox" name="espresso" id="espresso" value="espresso">Espresso
+                                    </label>
+                                    <label for="coldbrew">
+                                        <input type="checkbox" name="coldbrew" id="coldbrew" value="coldbrew">Cold Brew
+                                    </label>
+                                    <label for="drip">
+                                        <input type="checkbox" name="drip" id="drip" value="drip">Drip Coffee
+                                    </label>
+                                    <label for="decaf">
+                                        <input type="checkbox" name="decaf" id="decaf" value="decaf">Decaffeine
+                                    </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">
+                                    <label for="reason">
+                                        How did you hear about us?
+                                    </label>
+                                </th>
+                                <td>
+                                    <select name="reason" id="reason">
+                                        <option value="">CHOOSE ONE</option>
+                                        <option value="social">Social Media</option>
+                                        <option value="search">Search</option>
+                                        <option value="people">Friends/Family</option>
+                                        <option value="ad">Advertisement</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">
+                                    <label for="comment">
+                                        Message
+                                    </label>
+                                </th>
+
+                                <td>
+                                    <textarea name="comment" id="comment" cols="30" rows="10"
+                                        placeholder="Please write any messege for us."></textarea>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <th colspan="2">
+                                    <input type="reset" value="cancel" class="cancel">
+                                    <input type="submit" value="submit" class="submit">
+                                </th>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -107,7 +239,7 @@
                         <li><a href="#">Site map</a></li>
                     </ul>
 
-                    <ul class="social">
+                    <ul class="contact">
                         <li><i class="fa-brands fa-instagram"></i></li>
                         <li><i class="fab fa-facebook-f"></i></li>
                         <li><i class="fa-brands fa-twitter"></i></li>

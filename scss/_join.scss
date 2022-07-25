@@ -1,0 +1,229 @@
+.join {
+	.inner {
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+		h1 {
+			font-size: 70px;
+			margin-bottom: 100px;
+			margin-left: 50px;
+		}
+
+		.wrap {
+			width: 100%;
+			height: 100%;
+
+			display: flex;
+
+			.logo {
+				width: 25%;
+				padding: 50px;
+				margin-top: 10%;
+
+				img {
+					width: 90%;
+				}
+			}
+
+			.welcomeTxt {
+				width: 500px;
+				position: absolute;
+				top: 20%;
+				left: 100%;
+				font-size: 9vmin;
+				color: #00a9e0;
+				font-style: italic;
+				transform: rotate(-90deg);
+				z-index: -1;
+				transition: 1s;
+			}
+
+			#member {
+				width: 75%;
+				background: #f2f2f2;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				padding: 50px;
+
+				fieldset {
+					border: none;
+					width: 100%;
+					height: 100%;
+
+					h2 {
+						margin-bottom: 30px;
+						font-size: 50px;
+						opacity: 0.7;
+						color: $blue;
+						font-style: italic;
+						text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+					}
+
+					#terms {
+						width: 80%;
+						height: 250px;
+						color: $blue;
+						font-weight: 300;
+						line-height: 1.7;
+						border-radius: 20px;
+						border: 2px solid #ddd;
+						padding: 20px 40px;
+						margin: 0 5%;
+						margin-bottom: 20px;
+					}
+
+					.agreement {
+						color: $blue;
+						text-align: right;
+						font-weight: 300;
+						margin-right: 17%;
+						margin-bottom: 50px;
+
+						input {
+							vertical-align: middle;
+						}
+					}
+
+					table {
+						width: 100%;
+						border-top: 2px solid $btnBlue;
+						border-bottom: 2px solid $btnBlue;
+						padding: 30px;
+
+						th {
+							width: 35%;
+							text-align: left;
+							font-weight: 300;
+							color: $blue;
+							border-bottom: 1px solid #fff;
+							padding: 20px 30px;
+							padding-left: 0;
+
+							&:nth-of-type(7) {
+								padding-right: 0;
+							}
+
+							&:last-child {
+								text-align: center;
+								border-bottom: none;
+								padding: 50px 30px;
+								padding-bottom: 20px;
+
+								input {
+									width: 150px;
+									height: 40px;
+									text-transform: uppercase;
+									font-size: 16px;
+									font-weight: 300;
+									margin: 0 10px;
+									cursor: pointer;
+									transition: 0.5s;
+
+									&:hover {
+										box-shadow: 5px 5px 10px
+											rgba(0, 0, 0, 0.2);
+										transform: scale(1.02);
+									}
+
+									&.cancel {
+										color: $blue;
+										border: 1px solid $blue;
+										background: #fff;
+									}
+
+									&.submit {
+										color: #fff;
+										background: $blue;
+										border: none;
+									}
+								}
+							}
+						}
+
+						td {
+							width: 65%;
+							padding: 10px 30px;
+							padding-right: 0;
+							color: #555;
+							font-weight: 300;
+
+							input {
+								border: 1px solid #ddd;
+								color: #555;
+								margin-right: 5px;
+								font-weight: 300;
+								border-radius: 5px;
+								outline: none;
+
+								&:focus {
+									border: 1px solid $blue;
+								}
+							}
+
+							label {
+								margin-right: 15px;
+								display: block;
+								width: 100%;
+								margin-bottom: 5px;
+							}
+
+							[type='text'],
+							[type='password'] {
+								width: 70%;
+								height: 40px;
+								padding: 0 20px;
+								font-weight: 300;
+							}
+
+							[type='email'] {
+								width: 80%;
+								height: 40px;
+								padding: 0 20px;
+							}
+
+							.genderTxt,
+							.coffeeTxt {
+								color: $blue;
+								font-size: 13px;
+								margin-bottom: 10px;
+							}
+
+							select {
+								width: 80%;
+								height: 40px;
+								padding: 0 20px;
+								border: 1px solid #ddd;
+								font-weight: 300;
+								border-radius: 5px;
+								color: #555;
+							}
+
+							textarea#comment {
+								width: 80%;
+								height: 150px;
+								border: 1px solid #ddd;
+								font-weight: 300;
+								border-radius: 5px;
+								color: #555;
+								padding: 20px;
+								outline: none;
+
+								&:focus {
+									border: 1px solid $blue;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&:hover {
+				.welcomeTxt {
+					left: 0;
+					text-shadow: 20px 20px 0 #ddd;
+				}
+			}
+		}
+	}
+}
