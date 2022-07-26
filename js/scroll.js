@@ -1,16 +1,23 @@
 const sections = document.querySelectorAll("section");
 const scrollBar = document.querySelector(".scroll_bar");
 const lists = scrollBar.querySelectorAll("li");
+const lists_a = Array.from(lists);
 
 let base = -500;
 
 let posArr = null;
+
+let enableClick = true;
 
 setPos();
 
 // 윈도우 리사이즈 이벤트
 window.addEventListener("resize", e => {
     setPos();
+
+    const active = scrollBar.querySelector("li.on");
+    const active_index = lists_a.indexOf(active);
+    window.scroll(0, posArr[active_index - 1]);
 })
 
 // 윈도우 스크롤 이벤트
@@ -20,9 +27,12 @@ window.addEventListener("scroll", e => {
 })
 
 // 각 리스트 클릭 이벤트
-lis.forEach((li, index) => {
+lists.forEach((li, index) => {
     li.addEventListener("click", e => {
-        moveScroll(index);
+        if (enableClick) {
+            moveScroll(index);
+            enableClick = false;
+        }
     })
 })
 
@@ -56,7 +66,10 @@ function setPos() {
 function moveScroll(index) {
     new Anime(window, {
         prop: "scroll",
-        value: posArr[index] + base,
+        value: posArr[index - 1],
         duration: 1000,
+        callback: () => {
+            enableClick = true;
+        }
     })
 }

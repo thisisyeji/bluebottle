@@ -355,6 +355,14 @@ section {
 						i {
 							color: #efefef;
 						}
+
+						&:hover {
+							background: #efefef;
+
+							i {
+								color: $blue;
+							}
+						}
 					}
 				}
 			}

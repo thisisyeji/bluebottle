@@ -320,6 +320,12 @@ section h2 {
 #footer_sub .inner .wrap .footer_right .contact li i {
   color: #efefef;
 }
+#footer_sub .inner .wrap .footer_right .contact li:hover {
+  background: #efefef;
+}
+#footer_sub .inner .wrap .footer_right .contact li:hover i {
+  color: #01a1dd;
+}
 #footer_sub .inner .wrap p {
   position: absolute;
   bottom: 0;
@@ -1367,7 +1373,7 @@ section h2 {
   width: 100%;
   height: 100%;
   padding: 50px 0 0;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 #subscription .inner {
   width: 100%;
@@ -1497,8 +1503,8 @@ section h2 {
   width: 100%;
   height: 100vh;
   background: #fff;
-  padding-bottom: 200px;
-  margin: 0;
+  padding: 150px 0;
+  margin-top: 50px;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
   box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 0.5);
@@ -1870,6 +1876,9 @@ section h2 {
     font: 16px/1.4 "roboto";
   }
   /*--social--*/
+  #social {
+    margin-bottom: 0;
+  }
   #social .inner h1 {
     font-size: 7vmin;
   }
@@ -1971,6 +1980,7 @@ section h2 {
   }
   /*--social--*/
   #social {
+    padding: 50px 0;
     /*---footer---*/
   }
   #social .inner .img_slider {
