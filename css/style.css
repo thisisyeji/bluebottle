@@ -555,19 +555,19 @@ section h2 {
   margin-bottom: 30px;
   font-size: 50px;
   opacity: 1;
-  color: #01a1dd;
+  color: #fff;
   font-style: italic;
-  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 .join .inner .wrap #member fieldset #terms {
   width: 80%;
   height: 250px;
-  color: #01a1dd;
+  color: #777;
   background: #fff;
   font-weight: 300;
   line-height: 1.7;
   border-radius: 20px;
-  border: 2px solid #ddd;
+  border: 2px solid #00a9e0;
   padding: 20px 40px;
   margin: 0 5%;
   margin-bottom: 20px;
@@ -880,7 +880,7 @@ section h2 {
 
 section {
   padding: 50px 0;
-  margin: 200px 0;
+  margin: 200px 0 0;
   overflow-x: hidden;
 }
 section:hover h1 {
@@ -1030,13 +1030,13 @@ section h2 {
 }
 #header .inner .nav_mobile {
   position: fixed;
-  top: -100%;
+  top: -300%;
   left: 0;
   width: 100%;
   text-align: center;
   background-color: #f5f5f5;
   padding-bottom: 80px;
-  z-index: 3;
+  z-index: 4;
   transition: 1s;
 }
 #header .inner .nav_mobile.on {
@@ -1080,7 +1080,6 @@ section h2 {
 #figure {
   width: 100%;
   height: calc(100vh - 200px);
-  margin-bottom: 150px;
   overflow-x: hidden;
 }
 #figure .inner {
@@ -1108,8 +1107,7 @@ section h2 {
 /*-----------product-----------------*/
 #product {
   width: 100%;
-  padding: 0;
-  margin-bottom: 200px;
+  overflow: hidden;
 }
 #product .inner {
   width: 1180px;
@@ -1130,6 +1128,8 @@ section h2 {
 #product .inner .wrap article .video {
   width: 60%;
   height: 100%;
+  transition: 1s;
+  opacity: 0;
 }
 #product .inner .wrap article .video .vid_frame {
   width: 100%;
@@ -1153,9 +1153,16 @@ section h2 {
   font: 300 22px/1.3 "roboto";
   color: #777;
   margin: 70px 0 20px;
+  position: relative;
+  top: -20px;
+  opacity: 0;
+  transition: 1s;
 }
 #product .inner .wrap article .desc h2 {
   margin-bottom: 30px;
+  position: relative;
+  opacity: 0;
+  transition: 1.5s;
 }
 #product .inner .wrap article .desc a {
   display: inline-block;
@@ -1168,6 +1175,9 @@ section h2 {
   color: #01a1dd;
   text-align: center;
   transition: 0.5s;
+  position: relative;
+  bottom: -30px;
+  opacity: 0;
 }
 #product .inner .wrap article .desc a:hover {
   background: #00a9e0;
@@ -1176,17 +1186,69 @@ section h2 {
 #product .inner .wrap article:nth-of-type(1) {
   margin-bottom: 100px;
 }
+#product .inner .wrap article:nth-of-type(1) .video {
+  position: relative;
+  left: -50px;
+}
+#product .inner .wrap article:nth-of-type(1) .desc h2 {
+  left: 30px;
+}
 #product .inner .wrap article:nth-of-type(2) .video {
   order: 2;
+  position: relative;
+  right: -50px;
 }
 #product .inner .wrap article:nth-of-type(2) .desc {
   order: 1;
   text-align: right;
 }
+#product .inner .wrap article:nth-of-type(2) .desc h2 {
+  right: 30px;
+}
+#product.on .inner .wrap article:nth-of-type(1) .video {
+  opacity: 1;
+  left: 0;
+}
+#product.on .inner .wrap article:nth-of-type(1) .desc p {
+  position: relative;
+  top: 0;
+  opacity: 1;
+}
+#product.on .inner .wrap article:nth-of-type(1) .desc h2 {
+  left: 0;
+  opacity: 1;
+}
+#product.on .inner .wrap article:nth-of-type(1) .desc a {
+  bottom: 0;
+  transition: 1s;
+  opacity: 1;
+}
+#product.on .inner .wrap article:nth-of-type(2) .video {
+  opacity: 1;
+  right: 0;
+  transition-delay: 0.3s;
+}
+#product.on .inner .wrap article:nth-of-type(2) .desc p {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+#product.on .inner .wrap article:nth-of-type(2) .desc h2 {
+  right: 0;
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+#product.on .inner .wrap article:nth-of-type(2) .desc a {
+  bottom: 0;
+  opacity: 1;
+  transition: 1s;
+}
 
 /*---------------shop----------------*/
 #shop {
   width: 100%;
+  overflow: hidden;
 }
 #shop h1 {
   font-size: 9vmin;
@@ -1217,6 +1279,8 @@ section h2 {
   margin-right: 20px;
   float: left;
   transition: 0.5s;
+  bottom: -200px;
+  opacity: 0;
 }
 #shop .inner .wrap article:hover {
   transform: translateY(-20px);
@@ -1224,6 +1288,7 @@ section h2 {
 }
 #shop .inner .wrap article:hover img {
   transform: scale(1.2);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 #shop .inner .wrap article:hover .text {
   transform: translateX(0);
@@ -1276,6 +1341,26 @@ section h2 {
   color: #01a1dd;
   transform: scale(1.05);
 }
+#shop.on .inner .wrap article:nth-of-type(1) {
+  opacity: 1;
+  bottom: 0;
+  transition: 0.3s;
+}
+#shop.on .inner .wrap article:nth-of-type(2) {
+  opacity: 1;
+  bottom: 0;
+  transition: 0.5s;
+}
+#shop.on .inner .wrap article:nth-of-type(3) {
+  opacity: 1;
+  bottom: 0;
+  transition: 0.8s;
+}
+#shop.on .inner .wrap article:nth-of-type(4) {
+  opacity: 1;
+  bottom: 0;
+  transition: 1.1s;
+}
 
 /*-----------subscription--------------*/
 #subscription {
@@ -1293,6 +1378,9 @@ section h2 {
   text-align: center;
   font-size: 9vmin;
   margin-bottom: 50px;
+  position: relative;
+  left: -100px;
+  opacity: 0;
 }
 #subscription .inner h1 img {
   height: 110px;
@@ -1325,6 +1413,9 @@ section h2 {
   border-bottom-left-radius: 100px;
   padding: 20px 70px;
   overflow-y: scroll;
+  position: relative;
+  right: -100px;
+  opacity: 0;
 }
 #subscription .inner .wrap .right div {
   height: 100vh;
@@ -1390,6 +1481,16 @@ section h2 {
 #subscription .inner .input button:hover i {
   transform: scale(1.2);
 }
+#subscription.on .inner h1 {
+  left: 0;
+  opacity: 1;
+  transition: 1.5s;
+}
+#subscription.on .inner .wrap .right {
+  right: 0;
+  opacity: 1;
+  transition: 1.5s;
+}
 
 /*---------------social----------------*/
 #social {
@@ -1417,16 +1518,18 @@ section h2 {
 #social .inner h1 {
   font-size: 9vmin;
   position: absolute;
-  bottom: 20%;
   color: #00a9e0;
   font-style: italic;
   transform: rotate(-90deg);
   z-index: 4;
+  bottom: 0;
+  opacity: 0;
 }
 #social .inner .img_slider {
   width: 100%;
   height: 100%;
   position: relative;
+  /*--------삭제 예정--------*/
 }
 #social .inner .img_slider ul {
   width: 300%;
@@ -1469,27 +1572,29 @@ section h2 {
   right: 0;
 }
 #social .inner .img_slider .test {
-  width: 600%;
+  width: 300%;
   height: 50vh;
   position: absolute;
   top: 0;
-  left: -100%;
-  border: 1px solid red;
+  left: -50%;
+  border: 5px solid red;
+  box-sizing: content-box;
   display: flex;
 }
 #social .inner .img_slider .test li {
   width: 16.6666666667%;
   height: 50vh;
+  font-size: 70px;
   display: flex;
 }
 #social .inner .img_slider .test li:nth-of-type(1) {
-  border: 2px solid green;
+  border: 4px solid green;
 }
 #social .inner .img_slider .test li:nth-of-type(2) {
-  border: 2px solid darkviolet;
+  border: 4px solid darkviolet;
 }
 #social .inner .img_slider .test li:nth-of-type(3) {
-  border: 2px solid hotpink;
+  border: 4px solid grey;
 }
 #social .inner .img_slider .test li div {
   width: 50%;
@@ -1498,33 +1603,12 @@ section h2 {
   position: relative;
   border: 1px solid blue;
 }
-#social .inner .img_slider .test li div img {
-  width: 100%;
-  height: auto;
-  position: absolute;
-}
-#social .inner .img_slider .test li div:nth-of-type(1) img {
-  bottom: 0;
-  left: 0;
-}
-#social .inner .img_slider .test li div:nth-of-type(2) img {
-  top: 0;
-  right: 0;
-}
-#social .inner .img_slider .test li div:nth-of-type(3) img {
-  right: 0;
-  top: 50px;
-}
-#social .inner .img_slider .test li div:nth-of-type(4) img {
-  bottom: 0;
-  right: 0;
-}
 #social .inner .prev {
   position: absolute;
   top: 50%;
   left: 2%;
   transform: translateY(-50%);
-  font-size: 50px;
+  font-size: 60px;
   color: #00b4e6;
   text-shadow: 5px 5px 0px #fff;
   z-index: 3;
@@ -1534,10 +1618,15 @@ section h2 {
   top: 50%;
   right: 2%;
   transform: translateY(-50%);
-  font-size: 50px;
+  font-size: 60px;
   color: #00b4e6;
   text-shadow: 3px 3px 0px #fff;
   z-index: 3;
+}
+#social.on .inner h1 {
+  bottom: 20%;
+  opacity: 1;
+  transition: 1s;
 }
 
 /*---------------footer--------------*/
@@ -1602,9 +1691,17 @@ section h2 {
   border-radius: 50%;
   margin-left: 5px;
   cursor: pointer;
+  transition: 0.5s;
 }
 #footer .inner .wrap .footer_right .contact li i {
   color: #efefef;
+  transition: 0.5s;
+}
+#footer .inner .wrap .footer_right .contact li:hover {
+  background: #efefef;
+}
+#footer .inner .wrap .footer_right .contact li:hover i {
+  color: #01a1dd;
 }
 #footer .inner .wrap p {
   position: absolute;
@@ -1613,6 +1710,47 @@ section h2 {
   font-size: 13px;
   text-align: right;
   color: #fff;
+}
+
+/*---------------scroll--------------*/
+.scroll_bar {
+  position: fixed;
+  bottom: 30%;
+  right: 0px;
+  z-index: 3;
+}
+.scroll_bar li {
+  width: 3px;
+  height: 60px;
+  background: #efefef;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.scroll_bar li span {
+  width: 28px;
+  height: 60px;
+  text-align: center;
+  position: absolute;
+  top: -7px;
+  left: -40px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.scroll_bar li.on {
+  width: 28px;
+  background: #01a1dd;
+}
+.scroll_bar li.on span {
+  opacity: 1;
+  left: -17px;
 }
 
 @keyframes blink {
@@ -1801,6 +1939,9 @@ section h2 {
     width: 100%;
     margin-bottom: 10%;
   }
+  #shop .inner .wrap article:hover {
+    transform: translateY(0px);
+  }
   #shop .inner .wrap article:nth-of-type(odd) {
     margin-right: 0;
   }
@@ -1832,7 +1973,14 @@ section h2 {
   #social {
     /*---footer---*/
   }
+  #social .inner .img_slider {
+    /*--------삭제 예정--------*/
+  }
   #social .inner .img_slider ul {
+    width: 600%;
+    left: -100%;
+  }
+  #social .inner .img_slider .test {
     width: 600%;
     left: -100%;
   }
@@ -1928,9 +2076,6 @@ section h2 {
   #shop h1 {
     font-size: 40px;
   }
-  #shop .inner .wrap article:hover {
-    transform: translateY(0px);
-  }
   #shop .inner .wrap article .text h2 {
     font-size: 30px;
   }
@@ -1944,6 +2089,7 @@ section h2 {
   #subscription .inner .wrap .left {
     width: 100%;
     height: 30vh;
+    margin-bottom: 30px;
   }
   #subscription .inner .wrap .left h2 {
     margin: 30px;
@@ -1954,8 +2100,14 @@ section h2 {
     width: 95%;
     margin-left: 5%;
   }
+  #subscription .inner .wrap .right div {
+    margin-bottom: 30px;
+  }
+  #subscription .inner .wrap .right div:last-child {
+    margin-bottom: 0;
+  }
   #subscription .inner .wrap .right div h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
   #subscription .inner .input input {
     width: 60%;
@@ -1974,10 +2126,6 @@ section h2 {
   }
   #social .inner h1 {
     font-size: 40px;
-  }
-  #social .inner .img_slider ul {
-    width: 600%;
-    left: -100%;
   }
   #social .inner .img_slider ul li div {
     height: 70%;
@@ -2010,6 +2158,10 @@ section h2 {
     font-size: 11px;
     text-align: center;
     bottom: -30px;
+  }
+  /*---scroll bar---*/
+  .scroll_bar {
+    display: none;
   }
 }
 

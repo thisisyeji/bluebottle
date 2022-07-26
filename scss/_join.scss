@@ -53,20 +53,20 @@
 						margin-bottom: 30px;
 						font-size: 50px;
 						opacity: 1;
-						color: $blue;
+						color: #fff;
 						font-style: italic;
-						text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+						text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 					}
 
 					#terms {
 						width: 80%;
 						height: 250px;
-						color: $blue;
+						color: #777;
 						background: #fff;
 						font-weight: 300;
 						line-height: 1.7;
 						border-radius: 20px;
-						border: 2px solid #ddd;
+						border: 2px solid $bgBlue;
 						padding: 20px 40px;
 						margin: 0 5%;
 						margin-bottom: 20px;

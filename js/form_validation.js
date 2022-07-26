@@ -36,7 +36,7 @@ function isTxt(name, len) {
 
 function isEmail(name) {
     const input = form.querySelector(`[name=${name}]`);
-    const txt = input.value;
+    let txt = input.value;
 
     if (/@/.test(txt)) {
         const errMsgs = input.closest("td").querySelectorAll(".errMsg");
@@ -58,7 +58,7 @@ function isEmail(name) {
 
 function isCheck(name) {
     const inputs = form.querySelectorAll(`[name=${name}]`);
-    const isChecked = false;
+    let isChecked = false;
 
     for (let el of inputs) {
         if (el.checked) isChecked = true;
