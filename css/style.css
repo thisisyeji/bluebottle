@@ -905,34 +905,42 @@ section {
   font-weight: 700;
 }
 .about .inner .ceo {
+  width: 100%;
+  padding: 100px 0;
+  margin-bottom: 100px;
+}
+.about .inner .ceo .wrap {
   width: 1180px;
   margin: 0 auto;
-  margin-bottom: 200px;
   display: flex;
   align-items: center;
 }
-.about .inner .ceo .ceo_txt {
+.about .inner .ceo .wrap .ceo_txt {
   width: 580px;
   margin-right: 20px;
   padding: 0 20px;
+  position: relative;
+  left: -100px;
+  opacity: 0;
+  transition: 0.7s;
 }
-.about .inner .ceo .ceo_txt p {
+.about .inner .ceo .wrap .ceo_txt p {
   font-size: 32px;
   font-family: "Courgette", cursive;
   text-align: center;
   color: #00a9e0;
 }
-.about .inner .ceo .ceo_img {
+.about .inner .ceo .wrap .ceo_img {
   width: 580px;
   position: relative;
   padding: 0 20px;
 }
-.about .inner .ceo .ceo_img img {
+.about .inner .ceo .wrap .ceo_img img {
   width: 100%;
   filter: grayscale(100%);
   transition: 0.7s;
 }
-.about .inner .ceo .ceo_img a {
+.about .inner .ceo .wrap .ceo_img a {
   position: absolute;
   bottom: 5px;
   right: 40px;
@@ -944,14 +952,18 @@ section {
   transition: 0.5s;
   z-index: 3;
 }
-.about .inner .ceo .ceo_img:hover img {
+.about .inner .ceo .wrap .ceo_img:hover img {
   filter: grayscale(0);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   transform: translateY(-30px);
 }
-.about .inner .ceo .ceo_img:hover a {
+.about .inner .ceo .wrap .ceo_img:hover a {
   opacity: 1;
   transform: translateY(20px);
+}
+.about .inner .ceo:hover .wrap .ceo_txt {
+  left: 0;
+  opacity: 1;
 }
 .about .inner .business {
   width: 1180px;
@@ -963,7 +975,10 @@ section {
   margin-bottom: 30px;
 }
 .about .inner .business > p {
+  width: 80%;
   color: #555;
+  font-size: 18px;
+  margin: 0 auto;
   padding: 0 100px;
   margin-bottom: 50px;
 }
@@ -1014,60 +1029,68 @@ section {
   color: #fff;
 }
 .about .inner .team {
-  width: 1180px;
-  margin: 0 auto;
+  width: 100%;
   padding: 50px 0;
 }
-.about .inner .team h3 {
+.about .inner .team .wrap {
+  width: 1180px;
+  margin: 0 auto;
+}
+.about .inner .team .wrap h3 {
   margin-bottom: 30px;
 }
-.about .inner .team .people::after {
+.about .inner .team .wrap .people::after {
   content: "";
   display: block;
   clear: both;
 }
-.about .inner .team .people div {
+.about .inner .team .wrap .people div {
   float: left;
   width: 580px;
   height: 500px;
   border-radius: 20px;
   position: relative;
+  top: -50px;
+  opacity: 0;
   overflow: hidden;
+  transition: 0.5s;
 }
-.about .inner .team .people div:nth-of-type(1) {
+.about .inner .team .wrap .people div:nth-of-type(1) {
   margin-bottom: 20px;
   margin-right: 20px;
 }
-.about .inner .team .people div:nth-of-type(2) {
+.about .inner .team .wrap .people div:nth-of-type(2) {
   margin-bottom: 20px;
 }
-.about .inner .team .people div:nth-of-type(3) {
+.about .inner .team .wrap .people div:nth-of-type(3) {
   margin-right: 0;
   margin-right: 20px;
 }
-.about .inner .team .people div img {
+.about .inner .team .wrap .people div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
 }
-.about .inner .team .people div p {
+.about .inner .team .wrap .people div p {
   position: absolute;
   bottom: 0;
   right: 0;
   background: #fff;
   color: #01a1dd;
   font-size: 50px;
+  font-weight: 100;
   margin-bottom: 20px;
   padding: 20px;
   transition: 0.6s;
   z-index: 2;
 }
-.about .inner .team .people div p span {
+.about .inner .team .wrap .people div p span {
   font-size: 28px;
   font-weight: 200;
+  font-style: italic;
 }
-.about .inner .team .people div .p_info {
+.about .inner .team .wrap .people div .p_info {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1083,22 +1106,38 @@ section {
   justify-content: center;
   align-items: center;
 }
-.about .inner .team .people div .p_info a {
+.about .inner .team .wrap .people div .p_info a {
   color: #fff;
   font-size: 24px;
   border: 1px solid #fff;
   padding: 10px 30px;
   transition: 0.5s;
 }
-.about .inner .team .people div:hover img {
+.about .inner .team .wrap .people div:hover img {
   filter: grayscale(100%);
 }
-.about .inner .team .people div:hover p {
+.about .inner .team .wrap .people div:hover p {
   color: #fff;
   background: transparent;
 }
-.about .inner .team .people div:hover .p_info {
+.about .inner .team .wrap .people div:hover .p_info {
   opacity: 1;
+}
+.about .inner .team:hover .wrap .people > div {
+  top: 0;
+  opacity: 1;
+}
+.about .inner .team:hover .wrap .people > div:nth-of-type(1) {
+  transition-delay: 0s;
+}
+.about .inner .team:hover .wrap .people > div:nth-of-type(2) {
+  transition-delay: 0.3s;
+}
+.about .inner .team:hover .wrap .people > div:nth-of-type(3) {
+  transition-delay: 0.6s;
+}
+.about .inner .team:hover .wrap .people > div:nth-of-type(4) {
+  transition-delay: 0.9s;
 }
 
 * {
