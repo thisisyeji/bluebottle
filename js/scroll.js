@@ -1,4 +1,4 @@
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("figure, section");
 const scrollBar = document.querySelector(".scroll_bar");
 const lists = scrollBar.querySelectorAll("li");
 const lists_a = Array.from(lists);
@@ -17,7 +17,7 @@ window.addEventListener("resize", e => {
 
     const active = scrollBar.querySelector("li.on");
     const active_index = lists_a.indexOf(active);
-    window.scroll(0, posArr[active_index - 1]);
+    window.scroll(0, posArr[active_index]);
 })
 
 // 윈도우 스크롤 이벤트
@@ -41,7 +41,7 @@ function activation(scroll) {
     lists.forEach((li, index) => {
         if (scroll >= posArr[index] + base) {
             for (let li of lists) li.classList.remove("on");
-            lists[index + 1].classList.add("on");
+            lists[index].classList.add("on");
 
             for (let el of sections) el.classList.remove("on");
             sections[index].classList.add("on");
@@ -66,7 +66,7 @@ function setPos() {
 function moveScroll(index) {
     new Anime(window, {
         prop: "scroll",
-        value: posArr[index - 1],
+        value: posArr[index],
         duration: 1000,
         callback: () => {
             enableClick = true;

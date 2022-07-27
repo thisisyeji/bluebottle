@@ -1,238 +1,201 @@
 .join {
+	.sub_visual {
+		background: url(../bbimg/bg_join.jpeg) no-repeat center/cover;
+		background-attachment: fixed;
+	}
+
 	.inner {
 		width: 100%;
 		height: 100%;
 		position: relative;
+		padding-top: 50px;
 
-		.wrap {
-			width: 100%;
-			height: 100%;
+		#member {
+			width: 90%;
+			background: #f2f2f2;
+			border-top-right-radius: 50px;
+			border-bottom-right-radius: 50px;
+			margin-right: 10%;
+			padding: 50px;
 
-			position: relative;
-			display: flex;
-			flex-direction: row;
-
-			.welcomeTxt {
-				position: absolute;
-				top: -10%;
-				right: 0;
-				font-size: 100px;
-				color: $blue;
-				font-style: italic;
-				margin-top: 300px;
-				opacity: 0;
-				z-index: -1;
-				transition: 1s;
-			}
-
-			.logo {
-				width: 25%;
+			fieldset {
+				border: none;
+				width: 100%;
 				height: 100%;
-				padding: 50px;
-				margin-top: 10%;
 
-				img {
-					width: 80%;
-					margin: 0 10%;
+				h2 {
+					margin-bottom: 30px;
+					font-size: 50px;
+					color: #fff;
+					font-style: italic;
+					text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 				}
-			}
 
-			#member {
-				width: 75%;
-				background: #f2f2f2;
-				border-top-left-radius: 50px;
-				border-bottom-left-radius: 50px;
-				padding: 50px;
+				#terms {
+					width: 80%;
+					height: 250px;
+					color: #777;
+					background: #fff;
+					font-weight: 300;
+					line-height: 1.7;
+					border-radius: 20px;
+					border: 2px solid #999;
+					padding: 20px 40px;
+					margin: 0 5%;
+					margin-bottom: 20px;
+				}
 
-				fieldset {
-					border: none;
+				.agreement {
+					color: $blue;
+					text-align: right;
+					font-weight: 300;
+					margin-right: 17%;
+					margin-bottom: 50px;
+
+					input {
+						vertical-align: middle;
+					}
+				}
+
+				table {
 					width: 100%;
-					height: 100%;
+					border-top: 2px solid $btnBlue;
+					border-bottom: 2px solid $btnBlue;
+					padding: 30px;
 
-					h2 {
-						margin-bottom: 30px;
-						font-size: 50px;
-						opacity: 1;
-						color: #fff;
-						font-style: italic;
-						text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
-					}
-
-					#terms {
-						width: 80%;
-						height: 250px;
-						color: #777;
-						background: #fff;
+					th {
+						width: 35%;
+						text-align: left;
 						font-weight: 300;
-						line-height: 1.7;
-						border-radius: 20px;
-						border: 2px solid $bgBlue;
-						padding: 20px 40px;
-						margin: 0 5%;
-						margin-bottom: 20px;
-					}
-
-					.agreement {
 						color: $blue;
-						text-align: right;
-						font-weight: 300;
-						margin-right: 17%;
-						margin-bottom: 50px;
+						border-bottom: 1px solid #fff;
+						padding: 20px 30px;
+						padding-left: 0;
 
-						input {
-							vertical-align: middle;
-						}
-					}
-
-					table {
-						width: 100%;
-						border-top: 2px solid $btnBlue;
-						border-bottom: 2px solid $btnBlue;
-						padding: 30px;
-
-						th {
-							width: 35%;
-							text-align: left;
-							font-weight: 300;
-							color: $blue;
-							border-bottom: 1px solid #fff;
-							padding: 20px 30px;
-							padding-left: 0;
-
-							&:nth-of-type(7) {
-								padding-right: 0;
-							}
-
-							&:last-child {
-								text-align: center;
-								border-bottom: none;
-								padding: 50px 30px;
-								padding-bottom: 20px;
-
-								input {
-									width: 150px;
-									height: 40px;
-									text-transform: uppercase;
-									font-size: 16px;
-									font-weight: 300;
-									margin: 0 10px;
-									cursor: pointer;
-									transition: 0.5s;
-
-									&:hover {
-										box-shadow: 5px 5px 10px
-											rgba(0, 0, 0, 0.2);
-										transform: scale(1.02);
-									}
-
-									&.cancel {
-										color: $blue;
-										border: 1px solid $blue;
-										background: #fff;
-									}
-
-									&.submit {
-										color: #fff;
-										background: $blue;
-										border: none;
-									}
-								}
-							}
+						&:nth-of-type(7) {
+							padding-right: 0;
 						}
 
-						td {
-							width: 65%;
-
-							color: #555;
-							font-weight: 300;
-							padding: 10px 0px 25px 30px;
+						&:last-child {
+							text-align: center;
+							border-bottom: none;
+							padding: 50px 30px;
+							padding-bottom: 20px;
 
 							input {
-								border: 1px solid #ddd;
-								color: #555;
-								margin-right: 5px;
+								width: 150px;
+								height: 40px;
+								text-transform: uppercase;
+								font-size: 16px;
 								font-weight: 300;
-								border-radius: 5px;
-								outline: none;
+								margin: 0 10px;
+								cursor: pointer;
+								transition: 0.5s;
 
-								&:focus {
-									border: 1px solid $blue;
+								&:hover {
+									box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+									transform: scale(1.02);
 								}
-							}
 
-							label {
-								margin-right: 15px;
-								display: block;
-								width: 100%;
-								margin-bottom: 5px;
-							}
-
-							[type='text'],
-							[type='password'] {
-								width: 70%;
-								height: 40px;
-								padding: 0 20px;
-								font-weight: 300;
-							}
-
-							[type='email'] {
-								width: 80%;
-								height: 40px;
-								padding: 0 20px;
-							}
-
-							.genderTxt,
-							.coffeeTxt {
-								color: $blue;
-								font-size: 13px;
-								margin-bottom: 10px;
-							}
-
-							select {
-								width: 80%;
-								height: 40px;
-								padding: 0 20px;
-								border: 1px solid #ddd;
-								font-weight: 300;
-								border-radius: 5px;
-								color: #555;
-
-								&:focus {
+								&.cancel {
+									color: $blue;
 									border: 1px solid $blue;
+									background: #fff;
 								}
-							}
 
-							textarea#comment {
-								width: 80%;
-								height: 150px;
-								border: 1px solid #ddd;
-								font-weight: 300;
-								border-radius: 5px;
-								color: #555;
-								padding: 20px;
-								outline: none;
-
-								&:focus {
-									border: 1px solid $blue;
+								&.submit {
+									color: #fff;
+									background: $blue;
+									border: none;
 								}
 							}
 						}
 					}
 
-					.errMsg {
-						font-size: 13px;
-						margin-top: 5px;
-						margin-left: 10px;
-						color: hotpink;
+					td {
+						width: 65%;
+
+						color: #555;
+						font-weight: 300;
+						padding: 10px 0px 25px 30px;
+
+						input {
+							border: 1px solid #ddd;
+							color: #555;
+							margin-right: 5px;
+							font-weight: 300;
+							border-radius: 5px;
+							outline: none;
+
+							&:focus {
+								border: 1px solid $blue;
+							}
+						}
+
+						label {
+							margin-right: 15px;
+							display: block;
+							width: 100%;
+							margin-bottom: 5px;
+						}
+
+						[type='text'],
+						[type='password'] {
+							width: 70%;
+							height: 40px;
+							padding: 0 20px;
+							font-weight: 300;
+						}
+
+						[type='email'] {
+							width: 100%;
+							height: 40px;
+							padding: 0 20px;
+						}
+
+						.genderTxt,
+						.coffeeTxt {
+							color: $blue;
+							font-size: 13px;
+							margin-bottom: 10px;
+						}
+
+						select {
+							width: 100%;
+							height: 40px;
+							padding: 0 20px;
+							border: 1px solid #ddd;
+							font-weight: 300;
+							border-radius: 5px;
+							color: #555;
+
+							&:focus {
+								border: 1px solid $blue;
+							}
+						}
+
+						textarea#comment {
+							width: 100%;
+							height: 150px;
+							border: 1px solid #ddd;
+							font-weight: 300;
+							border-radius: 5px;
+							color: #555;
+							padding: 20px;
+							outline: none;
+
+							&:focus {
+								border: 1px solid $blue;
+							}
+						}
 					}
 				}
-			}
 
-			&:hover {
-				.welcomeTxt {
-					top: -24%;
-					text-shadow: 20px 20px 0 #ddd;
-					opacity: 0.7;
+				.errMsg {
+					font-size: 13px;
+					margin-top: 5px;
+					margin-left: 10px;
+					color: hotpink;
 				}
 			}
 		}
@@ -243,95 +206,66 @@
 	.join {
 		padding-bottom: 0;
 		.inner {
-			.wrap {
-				.logo {
-					width: 20%;
-					padding: 30px;
-					margin-top: 10%;
-
-					img {
-						width: 100%;
+			#member {
+				fieldset {
+					h2 {
+						margin-bottom: 20px;
+						font-size: 40px;
 					}
-				}
 
-				.welcomeTxt {
-					top: -10%;
-					right: 0;
-					font-size: 10vmin;
-				}
+					#terms {
+						width: 90%;
+						height: 200px;
+						margin-bottom: 10px;
+					}
 
-				#member {
-					width: 80%;
+					.agreement {
+						margin-bottom: 30px;
+						font-size: 14px;
+					}
 
-					fieldset {
-						h2 {
-							margin-bottom: 20px;
-							font-size: 40px;
-						}
+					table {
+						padding: 20px;
 
-						#terms {
-							width: 90%;
-							height: 200px;
-							margin-bottom: 10px;
-						}
-
-						.agreement {
-							margin-bottom: 30px;
+						th {
+							padding: 10px 20px;
+							padding-left: 0;
 							font-size: 14px;
-						}
 
-						table {
-							padding: 20px;
+							&:last-child {
+								padding: 30px;
 
-							th {
-								padding: 10px 20px;
-								padding-left: 0;
-								font-size: 14px;
-
-								&:last-child {
-									padding: 30px;
-
-									input {
-										font-size: 14px;
-									}
-								}
-							}
-
-							td {
-								padding: 10px 0px 20px 20px;
-								font-size: 14px;
-
-								[type='text'],
-								[type='password'] {
-									width: 100%;
-									height: 35px;
-								}
-
-								[type='email'] {
-									width: 100%;
-									height: 35px;
-								}
-								select {
-									width: 100%;
-									height: 35px;
-								}
-
-								textarea#comment {
-									width: 100%;
-									height: 100px;
+								input {
+									font-size: 14px;
 								}
 							}
 						}
 
-						.errMsg {
-							font-size: 12px;
+						td {
+							padding: 10px 0px 20px 20px;
+							font-size: 14px;
+
+							[type='text'],
+							[type='password'] {
+								width: 100%;
+								height: 35px;
+							}
+
+							[type='email'] {
+								height: 35px;
+							}
+							select {
+								height: 35px;
+							}
+
+							textarea#comment {
+								height: 100px;
+							}
 						}
 					}
-				}
 
-				&:hover {
-					.welcomeTxt {
-						top: -28%;
+					.errMsg {
+						font-size: 12px;
 					}
 				}
 			}
@@ -342,40 +276,22 @@
 @media screen and (max-width: $mobileBig) {
 	.join {
 		.inner {
-			.wrap {
-				.logo {
-					display: none;
-				}
+			#member {
+				width: 95%;
+				margin-right: 5%;
+				padding: 30px;
 
-				.welcomeTxt {
-					top: -10%;
-					right: 0;
-					font-size: 10vmin;
-				}
-
-				#member {
-					width: 95%;
-					margin-left: 5%;
-					padding: 30px;
-
-					fieldset {
-						h2 {
-							font-size: 32px;
-						}
-
-						table {
-							padding: 10px;
-
-							th {
-								padding: 10px;
-							}
-						}
+				fieldset {
+					h2 {
+						font-size: 32px;
 					}
-				}
 
-				&:hover {
-					.welcomeTxt {
-						top: -29%;
+					table {
+						padding: 10px;
+
+						th {
+							padding: 10px;
+						}
 					}
 				}
 			}
@@ -386,56 +302,38 @@
 @media screen and (max-width: $mobile) {
 	.join {
 		.inner {
-			.wrap {
-				.logo {
-					display: none;
-				}
+			#member {
+				width: 100%;
+				margin-right: 0;
+				padding: 30px 20px;
 
-				.welcomeTxt {
-					top: -10%;
-					right: 0;
-					font-size: 10vmin;
-				}
-
-				#member {
-					width: 100%;
-					margin-left: 0;
-					padding: 30px 20px;
-
-					fieldset {
-						h2 {
-							font-size: 28px;
-						}
-
-						#terms {
-							padding: 10px 20px;
-						}
-
-						table {
-							padding: 0;
-
-							th {
-								padding: 10px 0;
-
-								&:last-child {
-									padding: 30px;
-
-									input {
-										width: 80px;
-										height: 30px;
-									}
-								}
-
-								td {
-									padding: 10px 0;
-								}
-							}
-						}
+				fieldset {
+					h2 {
+						font-size: 28px;
 					}
 
-					&:hover {
-						.welcomeTxt {
-							top: -25%;
+					#terms {
+						padding: 10px 20px;
+					}
+
+					table {
+						padding: 0;
+
+						th {
+							padding: 10px 0;
+
+							&:last-child {
+								padding: 30px;
+
+								input {
+									width: 80px;
+									height: 30px;
+								}
+							}
+
+							td {
+								padding: 10px 0;
+							}
 						}
 					}
 				}

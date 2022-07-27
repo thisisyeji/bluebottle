@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* reset */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,300;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:ital,wght@1,300;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,20 +23,7 @@ a {
 }
 
 section {
-  padding: 50px 0;
   margin: 0;
-  overflow-x: hidden;
-}
-section:hover h1 {
-  text-shadow: 7px 7px 0 rgba(0, 168, 224, 0.5);
-}
-section h1 {
-  transition: 1s;
-}
-section h2 {
-  color: #666;
-  font-size: 42px;
-  line-height: 1.4;
 }
 
 .hidden {
@@ -225,6 +213,7 @@ section h2 {
   height: 100%;
   padding-top: 0;
   margin: 0;
+  overflow: hidden;
 }
 .content .sub_visual {
   width: 100%;
@@ -234,10 +223,62 @@ section h2 {
   margin-bottom: 100px;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.content .sub_visual .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: rgba(1, 161, 221, 0.7);
+  opacity: 0;
+  transition: 2s;
 }
 .content .sub_visual h1 {
+  font-size: 100px;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
   margin-left: 10%;
-  font-size: 70px;
+  bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+.content .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.content .inner > h2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 100px;
+  color: #01a1dd;
+  font-style: italic;
+  opacity: 0;
+  z-index: -1;
+  transition: 1s;
+}
+.content .inner h3 {
+  font-size: 50px;
+  color: #444;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.content .inner:hover > h2 {
+  top: -120px;
+  text-shadow: 20px 20px 0 #ddd;
+  opacity: 0.7;
+}
+.content:hover .sub_visual .overlay {
+  left: 0;
+  opacity: 1;
+}
+.content:hover h1 {
+  opacity: 1;
+  text-shadow: 7px 7px 0 rgba(0, 168, 224, 0.7);
 }
 
 .content_border {
@@ -316,6 +357,7 @@ section h2 {
   border-radius: 50%;
   margin-left: 5px;
   cursor: pointer;
+  transition: 0.5s;
 }
 #footer_sub .inner .wrap .footer_right .contact li i {
   color: #efefef;
@@ -345,16 +387,6 @@ section h2 {
 }
 /*---------------tablet----------------*/
 @media screen and (max-width: 1179px) {
-  section {
-    padding: 50px 0;
-    margin: 100px 0;
-  }
-  section h1 {
-    font-size: 5vmin;
-  }
-  section h2 {
-    font-size: 4vmin;
-  }
   /*--header--*/
   #header_sub .inner {
     width: 100%;
@@ -376,14 +408,26 @@ section h2 {
     display: block;
   }
   /*---------------content----------------*/
+  .content {
+    margin-bottom: 100px;
+  }
   .content .sub_visual {
     width: 100%;
   }
   .content .sub_visual h1 {
-    font-size: 7vmin;
+    font-size: 80px;
   }
   .content .inner {
     min-height: 400px;
+  }
+  .content .inner > h2 {
+    top: -20px;
+    right: 0;
+    font-size: 70px;
+    opacity: 0;
+  }
+  .content .inner:hover > h2 {
+    top: -100px;
   }
   .content_border {
     background: #fff;
@@ -418,16 +462,20 @@ section h2 {
 }
 /*---------------mobilebig----------------*/
 @media screen and (max-width: 768px) {
-  section {
-    margin-bottom: 100px 0;
-    padding: 30px 0;
-  }
   /*--content---*/
   .content .sub_visual h1 {
-    font-size: 50px;
+    font-size: 60px;
   }
   .content .inner {
     min-height: 300px;
+  }
+  .content .inner > h2 {
+    top: -20px;
+    right: 0;
+    font-size: 50px;
+  }
+  .content .inner:hover > h2 {
+    top: -70px;
   }
   /*---footer---*/
   #footer_sub .inner {
@@ -458,17 +506,17 @@ section h2 {
 }
 /*---------------mobile----------------*/
 @media screen and (max-width: 539px) {
-  section {
-    margin-bottom: 50px 0;
-    padding: 0;
-  }
   /*--header--*/
   #header .inner .nav_mobile .gnb li a {
     font-size: 18px;
   }
   /*--content---*/
+  .content .sub_visual {
+    margin-bottom: 60px;
+    justify-content: center;
+  }
   .content .sub_visual h1 {
-    font-size: 40px;
+    margin-left: 0;
   }
   .content .inner {
     min-height: 300px;
@@ -479,7 +527,7 @@ section h2 {
     border-bottom-right-radius: 70px;
     padding-bottom: 100px;
   }
-  .content_border .inner h1 {
+  .content_border .inner > h2 {
     font-size: 40px;
   }
   /*---footer---*/
@@ -511,61 +559,37 @@ section h2 {
     bottom: -30px;
   }
 }
+.join .sub_visual {
+  background: url(../bbimg/bg_join.jpeg) no-repeat center/cover;
+  background-attachment: fixed;
+}
 .join .inner {
   width: 100%;
   height: 100%;
   position: relative;
+  padding-top: 50px;
 }
-.join .inner .wrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-}
-.join .inner .wrap .welcomeTxt {
-  position: absolute;
-  top: -10%;
-  right: 0;
-  font-size: 100px;
-  color: #01a1dd;
-  font-style: italic;
-  margin-top: 300px;
-  opacity: 0;
-  z-index: -1;
-  transition: 1s;
-}
-.join .inner .wrap .logo {
-  width: 25%;
-  height: 100%;
-  padding: 50px;
-  margin-top: 10%;
-}
-.join .inner .wrap .logo img {
-  width: 80%;
-  margin: 0 10%;
-}
-.join .inner .wrap #member {
-  width: 75%;
+.join .inner #member {
+  width: 90%;
   background: #f2f2f2;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  margin-right: 10%;
   padding: 50px;
 }
-.join .inner .wrap #member fieldset {
+.join .inner #member fieldset {
   border: none;
   width: 100%;
   height: 100%;
 }
-.join .inner .wrap #member fieldset h2 {
+.join .inner #member fieldset h2 {
   margin-bottom: 30px;
   font-size: 50px;
-  opacity: 1;
   color: #fff;
   font-style: italic;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
-.join .inner .wrap #member fieldset #terms {
+.join .inner #member fieldset #terms {
   width: 80%;
   height: 250px;
   color: #777;
@@ -573,28 +597,28 @@ section h2 {
   font-weight: 300;
   line-height: 1.7;
   border-radius: 20px;
-  border: 2px solid #00a9e0;
+  border: 2px solid #999;
   padding: 20px 40px;
   margin: 0 5%;
   margin-bottom: 20px;
 }
-.join .inner .wrap #member fieldset .agreement {
+.join .inner #member fieldset .agreement {
   color: #01a1dd;
   text-align: right;
   font-weight: 300;
   margin-right: 17%;
   margin-bottom: 50px;
 }
-.join .inner .wrap #member fieldset .agreement input {
+.join .inner #member fieldset .agreement input {
   vertical-align: middle;
 }
-.join .inner .wrap #member fieldset table {
+.join .inner #member fieldset table {
   width: 100%;
   border-top: 2px solid #00b4e6;
   border-bottom: 2px solid #00b4e6;
   padding: 30px;
 }
-.join .inner .wrap #member fieldset table th {
+.join .inner #member fieldset table th {
   width: 35%;
   text-align: left;
   font-weight: 300;
@@ -603,16 +627,16 @@ section h2 {
   padding: 20px 30px;
   padding-left: 0;
 }
-.join .inner .wrap #member fieldset table th:nth-of-type(7) {
+.join .inner #member fieldset table th:nth-of-type(7) {
   padding-right: 0;
 }
-.join .inner .wrap #member fieldset table th:last-child {
+.join .inner #member fieldset table th:last-child {
   text-align: center;
   border-bottom: none;
   padding: 50px 30px;
   padding-bottom: 20px;
 }
-.join .inner .wrap #member fieldset table th:last-child input {
+.join .inner #member fieldset table th:last-child input {
   width: 150px;
   height: 40px;
   text-transform: uppercase;
@@ -622,27 +646,27 @@ section h2 {
   cursor: pointer;
   transition: 0.5s;
 }
-.join .inner .wrap #member fieldset table th:last-child input:hover {
+.join .inner #member fieldset table th:last-child input:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   transform: scale(1.02);
 }
-.join .inner .wrap #member fieldset table th:last-child input.cancel {
+.join .inner #member fieldset table th:last-child input.cancel {
   color: #01a1dd;
   border: 1px solid #01a1dd;
   background: #fff;
 }
-.join .inner .wrap #member fieldset table th:last-child input.submit {
+.join .inner #member fieldset table th:last-child input.submit {
   color: #fff;
   background: #01a1dd;
   border: none;
 }
-.join .inner .wrap #member fieldset table td {
+.join .inner #member fieldset table td {
   width: 65%;
   color: #555;
   font-weight: 300;
   padding: 10px 0px 25px 30px;
 }
-.join .inner .wrap #member fieldset table td input {
+.join .inner #member fieldset table td input {
   border: 1px solid #ddd;
   color: #555;
   margin-right: 5px;
@@ -650,35 +674,35 @@ section h2 {
   border-radius: 5px;
   outline: none;
 }
-.join .inner .wrap #member fieldset table td input:focus {
+.join .inner #member fieldset table td input:focus {
   border: 1px solid #01a1dd;
 }
-.join .inner .wrap #member fieldset table td label {
+.join .inner #member fieldset table td label {
   margin-right: 15px;
   display: block;
   width: 100%;
   margin-bottom: 5px;
 }
-.join .inner .wrap #member fieldset table td [type=text],
-.join .inner .wrap #member fieldset table td [type=password] {
+.join .inner #member fieldset table td [type=text],
+.join .inner #member fieldset table td [type=password] {
   width: 70%;
   height: 40px;
   padding: 0 20px;
   font-weight: 300;
 }
-.join .inner .wrap #member fieldset table td [type=email] {
-  width: 80%;
+.join .inner #member fieldset table td [type=email] {
+  width: 100%;
   height: 40px;
   padding: 0 20px;
 }
-.join .inner .wrap #member fieldset table td .genderTxt,
-.join .inner .wrap #member fieldset table td .coffeeTxt {
+.join .inner #member fieldset table td .genderTxt,
+.join .inner #member fieldset table td .coffeeTxt {
   color: #01a1dd;
   font-size: 13px;
   margin-bottom: 10px;
 }
-.join .inner .wrap #member fieldset table td select {
-  width: 80%;
+.join .inner #member fieldset table td select {
+  width: 100%;
   height: 40px;
   padding: 0 20px;
   border: 1px solid #ddd;
@@ -686,11 +710,11 @@ section h2 {
   border-radius: 5px;
   color: #555;
 }
-.join .inner .wrap #member fieldset table td select:focus {
+.join .inner #member fieldset table td select:focus {
   border: 1px solid #01a1dd;
 }
-.join .inner .wrap #member fieldset table td textarea#comment {
-  width: 80%;
+.join .inner #member fieldset table td textarea#comment {
+  width: 100%;
   height: 150px;
   border: 1px solid #ddd;
   font-weight: 300;
@@ -699,161 +723,112 @@ section h2 {
   padding: 20px;
   outline: none;
 }
-.join .inner .wrap #member fieldset table td textarea#comment:focus {
+.join .inner #member fieldset table td textarea#comment:focus {
   border: 1px solid #01a1dd;
 }
-.join .inner .wrap #member fieldset .errMsg {
+.join .inner #member fieldset .errMsg {
   font-size: 13px;
   margin-top: 5px;
   margin-left: 10px;
   color: hotpink;
-}
-.join .inner .wrap:hover .welcomeTxt {
-  top: -24%;
-  text-shadow: 20px 20px 0 #ddd;
-  opacity: 0.7;
 }
 
 @media screen and (max-width: 1179px) {
   .join {
     padding-bottom: 0;
   }
-  .join .inner .wrap .logo {
-    width: 20%;
-    padding: 30px;
-    margin-top: 10%;
-  }
-  .join .inner .wrap .logo img {
-    width: 100%;
-  }
-  .join .inner .wrap .welcomeTxt {
-    top: -10%;
-    right: 0;
-    font-size: 10vmin;
-  }
-  .join .inner .wrap #member {
-    width: 80%;
-  }
-  .join .inner .wrap #member fieldset h2 {
+  .join .inner #member fieldset h2 {
     margin-bottom: 20px;
     font-size: 40px;
   }
-  .join .inner .wrap #member fieldset #terms {
+  .join .inner #member fieldset #terms {
     width: 90%;
     height: 200px;
     margin-bottom: 10px;
   }
-  .join .inner .wrap #member fieldset .agreement {
+  .join .inner #member fieldset .agreement {
     margin-bottom: 30px;
     font-size: 14px;
   }
-  .join .inner .wrap #member fieldset table {
+  .join .inner #member fieldset table {
     padding: 20px;
   }
-  .join .inner .wrap #member fieldset table th {
+  .join .inner #member fieldset table th {
     padding: 10px 20px;
     padding-left: 0;
     font-size: 14px;
   }
-  .join .inner .wrap #member fieldset table th:last-child {
+  .join .inner #member fieldset table th:last-child {
     padding: 30px;
   }
-  .join .inner .wrap #member fieldset table th:last-child input {
+  .join .inner #member fieldset table th:last-child input {
     font-size: 14px;
   }
-  .join .inner .wrap #member fieldset table td {
+  .join .inner #member fieldset table td {
     padding: 10px 0px 20px 20px;
     font-size: 14px;
   }
-  .join .inner .wrap #member fieldset table td [type=text],
-.join .inner .wrap #member fieldset table td [type=password] {
+  .join .inner #member fieldset table td [type=text],
+.join .inner #member fieldset table td [type=password] {
     width: 100%;
     height: 35px;
   }
-  .join .inner .wrap #member fieldset table td [type=email] {
-    width: 100%;
+  .join .inner #member fieldset table td [type=email] {
     height: 35px;
   }
-  .join .inner .wrap #member fieldset table td select {
-    width: 100%;
+  .join .inner #member fieldset table td select {
     height: 35px;
   }
-  .join .inner .wrap #member fieldset table td textarea#comment {
-    width: 100%;
+  .join .inner #member fieldset table td textarea#comment {
     height: 100px;
   }
-  .join .inner .wrap #member fieldset .errMsg {
+  .join .inner #member fieldset .errMsg {
     font-size: 12px;
-  }
-  .join .inner .wrap:hover .welcomeTxt {
-    top: -28%;
   }
 }
 @media screen and (max-width: 768px) {
-  .join .inner .wrap .logo {
-    display: none;
-  }
-  .join .inner .wrap .welcomeTxt {
-    top: -10%;
-    right: 0;
-    font-size: 10vmin;
-  }
-  .join .inner .wrap #member {
+  .join .inner #member {
     width: 95%;
-    margin-left: 5%;
+    margin-right: 5%;
     padding: 30px;
   }
-  .join .inner .wrap #member fieldset h2 {
+  .join .inner #member fieldset h2 {
     font-size: 32px;
   }
-  .join .inner .wrap #member fieldset table {
+  .join .inner #member fieldset table {
     padding: 10px;
   }
-  .join .inner .wrap #member fieldset table th {
+  .join .inner #member fieldset table th {
     padding: 10px;
-  }
-  .join .inner .wrap:hover .welcomeTxt {
-    top: -29%;
   }
 }
 @media screen and (max-width: 539px) {
-  .join .inner .wrap .logo {
-    display: none;
-  }
-  .join .inner .wrap .welcomeTxt {
-    top: -10%;
-    right: 0;
-    font-size: 10vmin;
-  }
-  .join .inner .wrap #member {
+  .join .inner #member {
     width: 100%;
-    margin-left: 0;
+    margin-right: 0;
     padding: 30px 20px;
   }
-  .join .inner .wrap #member fieldset h2 {
+  .join .inner #member fieldset h2 {
     font-size: 28px;
   }
-  .join .inner .wrap #member fieldset #terms {
+  .join .inner #member fieldset #terms {
     padding: 10px 20px;
   }
-  .join .inner .wrap #member fieldset table {
+  .join .inner #member fieldset table {
     padding: 0;
   }
-  .join .inner .wrap #member fieldset table th {
+  .join .inner #member fieldset table th {
     padding: 10px 0;
   }
-  .join .inner .wrap #member fieldset table th:last-child {
+  .join .inner #member fieldset table th:last-child {
     padding: 30px;
   }
-  .join .inner .wrap #member fieldset table th:last-child input {
+  .join .inner #member fieldset table th:last-child input {
     width: 80px;
     height: 30px;
   }
-  .join .inner .wrap #member fieldset table th td {
+  .join .inner #member fieldset table th td {
     padding: 10px 0;
-  }
-  .join .inner .wrap #member:hover .welcomeTxt {
-    top: -25%;
   }
 }
 #result {
@@ -880,14 +855,264 @@ section h2 {
   font-size: 7vmin;
 }
 
+.about .sub_visual {
+  background: url(../bbimg/bg_about.jpeg) no-repeat center/cover;
+  background-attachment: fixed;
+}
+.about .inner {
+  margin: 0 auto;
+}
+.about .inner article {
+  padding: 50px 0;
+}
+.about .inner article h3 {
+  font-size: 50px;
+}
+.about .inner .intro {
+  width: 1180px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  padding-top: 100px;
+  display: flex;
+}
+.about .inner .intro h3 {
+  width: 380px;
+  margin-right: 20px;
+}
+.about .inner .intro p {
+  width: 800px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #666;
+}
+.about .inner .intro p strong {
+  color: #01a1dd;
+}
+.about .inner .pic_us {
+  width: 100%;
+  height: 60vh;
+  background: url(../bbimg/pic_us.jpeg) no-repeat center/cover;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .inner .pic_us p {
+  color: #fff;
+  font-size: 70px;
+  font-weight: 700;
+}
+.about .inner .ceo {
+  width: 1180px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  display: flex;
+  align-items: center;
+}
+.about .inner .ceo .ceo_txt {
+  width: 580px;
+  margin-right: 20px;
+  padding: 0 20px;
+}
+.about .inner .ceo .ceo_txt p {
+  font-size: 32px;
+  font-family: "Courgette", cursive;
+  text-align: center;
+  color: #00a9e0;
+}
+.about .inner .ceo .ceo_img {
+  width: 580px;
+  position: relative;
+  padding: 0 20px;
+}
+.about .inner .ceo .ceo_img img {
+  width: 100%;
+  filter: grayscale(100%);
+  transition: 0.7s;
+}
+.about .inner .ceo .ceo_img a {
+  position: absolute;
+  bottom: 5px;
+  right: 40px;
+  display: block;
+  font-size: 28px;
+  color: #01a1dd;
+  text-align: right;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+}
+.about .inner .ceo .ceo_img:hover img {
+  filter: grayscale(0);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-30px);
+}
+.about .inner .ceo .ceo_img:hover a {
+  opacity: 1;
+  transform: translateY(20px);
+}
+.about .inner .business {
+  width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 200px;
+}
+.about .inner .business h3 {
+  margin-bottom: 30px;
+}
+.about .inner .business > p {
+  color: #555;
+  padding: 0 100px;
+  margin-bottom: 50px;
+}
+.about .inner .business .nums {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .inner .business .nums div {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1px solid #01a1dd;
+  background: #fff;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s;
+}
+.about .inner .business .nums div:last-child {
+  margin-right: 0;
+}
+.about .inner .business .nums div strong {
+  font: italic 100 120px/1 "Montserrat";
+  color: #01a1dd;
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  transition: 1s;
+}
+.about .inner .business .nums div p {
+  font-size: 24px;
+  font-weight: 200;
+  text-align: center;
+  color: #01a1dd;
+  line-height: 1;
+}
+.about .inner .business .nums div:hover {
+  background-color: #01a1dd;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.about .inner .business .nums div:hover strong {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+.about .inner .business .nums div:hover p {
+  color: #fff;
+}
+.about .inner .team {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.about .inner .team h3 {
+  margin-bottom: 30px;
+}
+.about .inner .team .people::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.about .inner .team .people div {
+  float: left;
+  width: 580px;
+  height: 500px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.about .inner .team .people div:nth-of-type(1) {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.about .inner .team .people div:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+.about .inner .team .people div:nth-of-type(3) {
+  margin-right: 0;
+  margin-right: 20px;
+}
+.about .inner .team .people div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.about .inner .team .people div p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  color: #01a1dd;
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: 0.6s;
+  z-index: 2;
+}
+.about .inner .team .people div p span {
+  font-size: 28px;
+  font-weight: 200;
+}
+.about .inner .team .people div .p_info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 169, 224, 0.7);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about .inner .team .people div .p_info a {
+  color: #fff;
+  font-size: 24px;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  transition: 0.5s;
+}
+.about .inner .team .people div:hover img {
+  filter: grayscale(100%);
+}
+.about .inner .team .people div:hover p {
+  color: #fff;
+  background: transparent;
+}
+.about .inner .team .people div:hover .p_info {
+  opacity: 1;
+}
+
 * {
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 section {
   padding: 50px 0;
   margin: 200px 0 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 section:hover h1 {
   text-shadow: 7px 7px 0 rgba(0, 168, 224, 0.5);
@@ -927,6 +1152,7 @@ section h2 {
   left: 50%;
   transform: translateX(-50%);
   height: 80px;
+  z-index: 2;
 }
 #header .inner .logo:hover img {
   transform: rotateY(180deg);
@@ -1107,7 +1333,14 @@ section h2 {
   text-align: right;
   position: absolute;
   top: 45%;
-  left: 5%;
+  left: -50px;
+  opacity: 0;
+  transition: 1s;
+}
+#figure:hover h1 {
+  left: 7%;
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 /*-----------product-----------------*/
@@ -1253,6 +1486,7 @@ section h2 {
 
 /*---------------shop----------------*/
 #shop {
+  margin-bottom: 100px;
   width: 100%;
   overflow: hidden;
 }
@@ -1490,7 +1724,7 @@ section h2 {
 #subscription.on .inner h1 {
   left: 0;
   opacity: 1;
-  transition: 1.5s;
+  transition: 0.5s;
 }
 #subscription.on .inner .wrap .right {
   right: 0;
@@ -1612,22 +1846,30 @@ section h2 {
 #social .inner .prev {
   position: absolute;
   top: 50%;
-  left: 2%;
+  left: 4%;
   transform: translateY(-50%);
   font-size: 60px;
   color: #00b4e6;
   text-shadow: 5px 5px 0px #fff;
-  z-index: 3;
+  z-index: 4;
+  transition: 0.5s;
+}
+#social .inner .prev:hover {
+  transform: translateY(-50%) scale(1.3);
 }
 #social .inner .next {
   position: absolute;
   top: 50%;
-  right: 2%;
+  right: 4%;
   transform: translateY(-50%);
   font-size: 60px;
   color: #00b4e6;
   text-shadow: 3px 3px 0px #fff;
-  z-index: 3;
+  z-index: 4;
+  transition: 0.5s;
+}
+#social .inner .next:hover {
+  transform: translateY(-50%) scale(1.3);
 }
 #social.on .inner h1 {
   bottom: 20%;
@@ -1882,6 +2124,9 @@ section h2 {
   #social .inner h1 {
     font-size: 7vmin;
   }
+  #social .inner .next {
+    right: 6%;
+  }
   /*---footer---*/
   #footer {
     height: 50vh;
@@ -2059,7 +2304,7 @@ section h2 {
   #figure .inner {
     width: 100%;
     background-image: url(../bbimg/bgmobile2.jpg);
-    background-position: center;
+    background-position: bottom;
     padding: 0;
     margin-left: 0;
   }

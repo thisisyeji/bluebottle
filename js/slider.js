@@ -4,25 +4,21 @@ const slider = document.querySelector(".img_slider");
 const ul = slider.querySelector("ul");
 const lis = ul.querySelectorAll("li");
 
-let liWid = parseFloat(getComputedStyle(lis[0]).width);
-let wid = parseFloat(getComputedStyle(slider).width);
-let per = Math.ceil(-(liWid / wid) * 100);
+let liWid = 0;
+let wid = 0;
+let per = 0;
 
 getWid();
 
-// 문제 => 리사이즈 됐을 때 per 값을 바꾸고 싶은데 바뀌지 않음()
 window.addEventListener("resize", () => {
     getWid();
 
-    // console.log(liWid);
-    // console.log(wid);
-    // console.log(per);
 })
 
 function getWid() {
-    let wid = parseFloat(getComputedStyle(slider).width);
-    let liWid = parseFloat(getComputedStyle(lis[0]).width);
-    let per = Math.ceil(-(liWid / wid) * 100);
+    wid = parseFloat(getComputedStyle(slider).width);
+    liWid = parseFloat(getComputedStyle(lis[0]).width);
+    per = Math.ceil(-(liWid / wid) * 100);
 
     ul.style.left = per + "%";
 }
