@@ -1415,6 +1415,7 @@ section {
   padding: 25px;
 }
 .youtube .inner .wrap article .pic img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1436,28 +1437,115 @@ section {
 aside {
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   padding: 50px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-aside iframe {
+aside .vid_box {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  order: 2;
+}
+aside .vid_box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
 aside span {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  width: 100%;
   cursor: pointer;
   font-size: 24px;
   font-weight: 300;
+  text-align: right;
   color: #fff;
+  order: 1;
 }
 
+@media screen and (max-width: 1179px) {
+  .youtube .inner .wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .youtube .inner .wrap article {
+    width: 90%;
+    height: 370px;
+  }
+  .youtube .inner .wrap article h3 {
+    font-size: 24px;
+    padding-left: 5px;
+  }
+  .youtube .inner .wrap article .con {
+    padding-left: 10px;
+  }
+  .youtube .inner .wrap article .con span {
+    margin-top: 50px;
+  }
+  .youtube .inner .wrap article .pic {
+    padding: 0;
+    padding-top: 25px;
+  }
+  .youtube .inner .wrap article:hover .pic img {
+    transform: translateX(30px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .youtube .inner .wrap article {
+    display: flex;
+    height: 100%;
+  }
+  .youtube .inner .wrap article h3 {
+    width: 40%;
+    margin-left: 10px;
+  }
+  .youtube .inner .wrap article .con {
+    display: none;
+  }
+  .youtube .inner .wrap article .pic {
+    width: 60%;
+    padding: 0;
+  }
+  .youtube .inner .wrap article:hover .pic img {
+    transform: translateX(20px);
+  }
+}
+@media screen and (max-width: 539px) {
+  .youtube .inner .wrap article {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  .youtube .inner .wrap article h3 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    order: 2;
+    margin: 0;
+    padding: 0;
+  }
+  .youtube .inner .wrap article .pic {
+    width: 90%;
+    order: 1;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .youtube .inner .wrap article:hover .pic img {
+    transform: translateX(0);
+  }
+}
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -1732,9 +1820,10 @@ section h2 {
 }
 #product .inner .wrap article .video .vid_frame {
   width: 100%;
-  height: 100%;
+  height: 0%;
   position: relative;
   padding-bottom: 56.25%;
+  overflow: hidden;
 }
 #product .inner .wrap article .video .vid_frame iframe {
   position: absolute;

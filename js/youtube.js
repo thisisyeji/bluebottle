@@ -45,7 +45,7 @@ function createList(url) {
                     <span>${date}</span>
                 </div>
                 <a class="pic" href="#" data-vid="${item.snippet.resourceId.videoId}">
-                    <img src="${item.snippet.thumbnails.standard.url}">
+                    <img src="${item.snippet.thumbnails.maxres.url}">
                 </a>
             </article>
             `
@@ -58,7 +58,9 @@ function createPop(e) {
     let vidId = e.target.parentElement.getAttribute("data-vid");
     let pop = document.createElement("aside");
     pop.innerHTML = `
-        <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" allowfullscreen></iframe>
+        <div class="vid_box">
+            <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" allowfullscreen></iframe>
+        </div>
         <span>
             CLOSE
         </span>
