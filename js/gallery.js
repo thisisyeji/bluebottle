@@ -15,13 +15,15 @@ const frame = document.querySelector(".frame");
 const loading = document.querySelector(".loading");
 
 const base = "https://www.flickr.com/services/rest/?";
-const method_faves = "flickr.favorites.getList";
+const method_favs = "flickr.favorites.getList";
 const key = "ca6bb9623cb117b2c44bd339126530e9";
 const user_id = "196138805@N05";
 const per_page = 200;
-const url_favs = `${base}method=${method_faves}&api_key=${key}&user_id=${user_id}&per_page=${per_page}&format=json&nojsoncallback=1`;
+const url_favs = `${base}method=${method_favs}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&user_id=${user_id}`;
+
 
 callData(url_favs);
+
 
 // 썸네일 클릭 이벤트 -> frame에 위임
 frame.addEventListener("click", e => {
@@ -62,22 +64,24 @@ function createImgs(items) {
         if (title.length > 30) title = title.slice(0, 35) + "..."
 
         result += `
-            <article class="item">
-                <div>
-                
-                    <a class="pic" href="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg">
-                        <p>${title}</p>
-                        <img src="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_z.jpg">
-                    </a>
+        <article class="item">
+            <div>
 
+                <a class="pic" href="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg">
+                    <p>${title}</p>
+                    <img src="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_z.jpg">
+                </a>
+
+                <div class="profile">
                     <div class="info">
                         <img src="http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg">
-                        <span>${item.owner}</span>
-                        <i class="fa-solid fa-heart"></i>
+                            <span>${item.owner}</span>
                     </div>
-                </div>
-            </article>
-            `;
+                    <i class="fa-solid fa-heart"></i>
+                </.div>
+            </div>
+        </article>
+        `;
     })
 
     frame.innerHTML = result;
@@ -111,7 +115,7 @@ function imgLoaded() {
 
 // Isotope 함수
 function isoLayout() {
-    new Isotope(frame, { // 배치할 요소의 부모요소
+    const grid = new Isotope(frame, { // 배치할 요소의 부모요소
         itemSelector: ".item", // 배치할 요소명
         columnWidth: ".item", // 너비값을 구할 기준 요소명
         transitionDuration: "0.8s", // 화면 재배치시 요소가 움직이는 속도
@@ -119,6 +123,35 @@ function isoLayout() {
 
     loading.classList.add("off");
     frame.classList.add("on");
+
+    // like 버튼 기능 토글
+    const likes = frame.querySelectorAll("i");
+    for (const like of likes) {
+        like.addEventListener("click", e => {
+            like.classList.toggle("on");
+            e.target.closest("article").classList.add("like");
+        })
+    }
+
+    // sort 기능 
+    const sortBtns = document.querySelectorAll(".sort li");
+
+    for (let btn of sortBtns)
+        btn.addEventListener("click", e => {
+            e.preventDefault();
+
+            const sort = e.currentTarget.querySelector("a").getAttribute("href");
+
+            grid.arrange({
+                filter: sort
+            });
+
+            for (let btn of sortBtns) {
+                btn.classList.remove("like_on");
+            }
+
+            e.currentTarget.classList.add("like_on");
+        })
 }
 
 // aside 생성
@@ -130,7 +163,7 @@ function createPop(e) {
     const pop = document.createElement("aside");
     pop.classList.add("gal_pop");
     let result = `
-        <div class="con">
+        <div div class="con" >
             <img src="${imgSrc}">
         </div>
         <span>CLOSE</span>

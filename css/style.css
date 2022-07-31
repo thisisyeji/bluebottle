@@ -1582,6 +1582,45 @@ section {
 .gallery .inner .loading.off {
   opacity: 0;
 }
+.gallery .inner .sort {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.gallery .inner .sort li {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+.gallery .inner .sort li:hover {
+  transform: scale(1.05);
+}
+.gallery .inner .sort li.like_on a {
+  background: rgba(0, 169, 224, 0.8);
+  color: #fff;
+}
+.gallery .inner .sort li.like_on a i {
+  color: rgb(236, 84, 67);
+}
+.gallery .inner .sort li a {
+  color: #777;
+  font-weight: 200;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.gallery .inner .sort li a i {
+  color: #01a1dd;
+  font-size: 16px;
+  margin-left: 10px;
+}
 .gallery .inner .frame {
   width: 100%;
   overflow: hidden;
@@ -1610,14 +1649,14 @@ section {
   transition: 0.5s;
 }
 .gallery .inner .frame .item > div:hover {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .gallery .inner .frame .item > div:hover .pic img {
-  filter: grayscale(0%);
+  filter: grayscale(100%);
   transform: scale(1.1);
 }
 .gallery .inner .frame .item > div:hover .pic p {
-  opacity: 0;
+  opacity: 1;
 }
 .gallery .inner .frame .item > div .pic {
   display: block;
@@ -1627,7 +1666,6 @@ section {
 }
 .gallery .inner .frame .item > div .pic img {
   width: 100%;
-  filter: grayscale(100%);
   transition: 0.5s;
 }
 .gallery .inner .frame .item > div .pic p {
@@ -1637,37 +1675,44 @@ section {
   color: #fff;
   font-size: 18px;
   text-shadow: 1px 1px 0 #01a1dd;
+  background: rgba(0, 169, 224, 0.3);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 1;
+  transition: 0.5s;
+  opacity: 0;
   z-index: 3;
 }
-.gallery .inner .frame .item > div .info {
+.gallery .inner .frame .item > div .profile {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
-.gallery .inner .frame .item > div .info img {
+.gallery .inner .frame .item > div .profile .info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.gallery .inner .frame .item > div .profile .info img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 20px;
 }
-.gallery .inner .frame .item > div .info span {
+.gallery .inner .frame .item > div .profile .info span {
   font-size: 14px;
   margin-right: 30px;
   color: #777;
 }
-.gallery .inner .frame .item > div .info i {
+.gallery .inner .frame .item > div .profile i {
   cursor: pointer;
   color: #999;
   font-size: 20px;
   transition: 0.5s;
 }
-.gallery .inner .frame .item > div .info i.on {
+.gallery .inner .frame .item > div .profile i.on {
   color: rgb(236, 84, 67);
 }
 
@@ -1706,6 +1751,36 @@ section {
   order: 1;
 }
 
+@media screen and (max-width: 1179px) {
+  .gallery .inner .frame .item {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gallery .inner .frame .item {
+    width: 50%;
+  }
+  .gallery .inner .frame .item > div .pic p {
+    font-size: 16px;
+  }
+  .gallery .inner .frame .item > div .profile .info span {
+    font-size: 14px;
+  }
+  .gallery .inner .frame .item > div .profile i {
+    font-size: 16px;
+  }
+  .gal_pop {
+    padding: 5vh;
+  }
+  .gal_pop span {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .gallery .inner .frame .item {
+    width: 100%;
+  }
+}
 * {
   font-family: "Poppins", sans-serif;
 }
