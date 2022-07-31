@@ -1471,6 +1471,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
+  max-height: 800px;
   border-radius: 10px;
 }
 .you_pop span {
@@ -1555,6 +1556,16 @@ section {
     transform: translateX(0);
   }
 }
+.community .inner {
+  width: 100%;
+  height: 100%;
+}
+.community .inner .wrap {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 .gallery {
   width: 100%;
   height: 100%;
@@ -1572,7 +1583,7 @@ section {
   padding: 100px 10px 0;
 }
 .gallery .inner .loading {
-  height: 100%;
+  height: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1591,9 +1602,9 @@ section {
   width: 100px;
   height: 30px;
   text-align: center;
-  padding: 5px;
   cursor: pointer;
   z-index: 2;
+  transition: 0.5s;
 }
 .gallery .inner .sort li:hover {
   transform: scale(1.05);
@@ -1757,6 +1768,10 @@ section {
   }
 }
 @media screen and (max-width: 768px) {
+  .gallery .inner .loading {
+    height: 60%;
+    margin-top: 50px;
+  }
   .gallery .inner .frame .item {
     width: 50%;
   }
@@ -1777,6 +1792,12 @@ section {
   }
 }
 @media screen and (max-width: 539px) {
+  .gallery .inner {
+    padding-top: 50px;
+  }
+  .gallery .inner .loading {
+    height: 50%;
+  }
   .gallery .inner .frame .item {
     width: 100%;
   }

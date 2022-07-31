@@ -15,7 +15,7 @@
 		padding: 100px 10px 0;
 
 		.loading {
-			height: 100%;
+			height: 80%;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -36,9 +36,9 @@
 				width: 100px;
 				height: 30px;
 				text-align: center;
-				padding: 5px;
 				cursor: pointer;
 				z-index: 2;
+				transition: 0.5s;
 
 				&:hover {
 					transform: scale(1.05);
@@ -244,6 +244,10 @@
 @media screen and(max-width: $mobileBig) {
 	.gallery {
 		.inner {
+			.loading {
+				height: 60%;
+				margin-top: 50px;
+			}
 			.frame {
 				.item {
 					width: calc(100% / 2);
@@ -282,6 +286,11 @@
 @media screen and(max-width: $mobile) {
 	.gallery {
 		.inner {
+			padding-top: 50px;
+			.loading {
+				height: 50%;
+			}
+
 			.frame {
 				.item {
 					width: 100%;
