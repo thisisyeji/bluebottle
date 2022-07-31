@@ -8,6 +8,8 @@
 @import 'result.scss';
 @import 'about.scss';
 @import 'youtube.scss';
+@import 'community.scss';
+@import 'gallery.scss';
 
 $tablet: 1179px;
 $mobileBig: 768px;
@@ -676,7 +678,7 @@ section {
 				float: left;
 
 				h2 {
-					font-weight: 300;
+					font-weight: 200;
 					margin-top: 50%;
 					margin-left: 25%;
 				}

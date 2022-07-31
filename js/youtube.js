@@ -57,6 +57,7 @@ function createList(url) {
 function createPop(e) {
     let vidId = e.target.parentElement.getAttribute("data-vid");
     let pop = document.createElement("aside");
+    pop.classList.add("you_pop")
     pop.innerHTML = `
         <div class="vid_box">
             <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" allowfullscreen></iframe>
@@ -66,12 +67,27 @@ function createPop(e) {
         </span>
     `;
     document.body.append(pop);
+    new Anime(pop, {
+        prop: "opacity",
+        value: 1,
+        duration: 500
+    })
 }
 
 function closePop(e) {
     const pop = document.querySelector("aside");
     if (pop) {
         const close = pop.querySelector("span");
-        if (e.target == close) pop.remove();
+
+        if (e.target == close) {
+            new Anime(pop, {
+                prop: "opacity",
+                value: 0,
+                duration: 500,
+                callback: () => {
+                    pop.remove();
+                }
+            })
+        }
     }
 }

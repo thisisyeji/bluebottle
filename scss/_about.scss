@@ -149,7 +149,7 @@
 
 			> p {
 				width: 80%;
-				color: #555;
+				color: #666;
 				font-size: 22px;
 				font-weight: 200;
 				line-height: 1.5;
@@ -412,6 +412,7 @@
 			.business {
 				width: 90%;
 				margin: 0 auto;
+				margin-bottom: 200px;
 				text-align: center;
 				> p {
 					width: 100%;
@@ -525,6 +526,7 @@
 			}
 
 			.business {
+				margin-bottom: 100px;
 				.nums {
 					div {
 						width: 120px;
@@ -593,6 +595,7 @@
 
 			.business {
 				margin-bottom: 50px;
+				text-align: left;
 				p {
 					font-size: 16px;
 				}

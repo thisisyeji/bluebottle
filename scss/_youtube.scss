@@ -91,14 +91,15 @@
 	}
 }
 
-aside {
+.you_pop {
 	width: 100%;
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.9);
-	padding: 50px;
 	position: fixed;
 	top: 0;
 	left: 0;
+	opacity: 0;
+	padding: 10vh;
 	z-index: 6;
 
 	display: flex;
@@ -111,6 +112,7 @@ aside {
 		height: 0;
 		position: relative;
 		padding-bottom: 56.25%;
+		margin: 20px;
 		overflow: hidden;
 		order: 2;
 

@@ -1,0 +1,174 @@
+.gallery {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 0;
+	padding-bottom: 0;
+
+	.sub_visual {
+		background: url(../bbimg/bg_gal.jpg) no-repeat center/cover;
+		background-attachment: fixed;
+	}
+	.inner {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 100px 10px 0;
+
+		.loading {
+			height: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: 0.5s;
+
+			&.off {
+				opacity: 0;
+			}
+		}
+
+		.frame {
+			width: 100%;
+			overflow: hidden;
+			transform: translateY(100px);
+			opacity: 0;
+			transition: 1s;
+
+			&.on {
+				transform: translateY(0);
+				opacity: 1;
+			}
+
+			&::after {
+				@include floatParent;
+			}
+
+			.item {
+				width: calc(100% / 4);
+				float: left;
+				padding: 10px;
+
+				position: relative;
+
+				> div {
+					width: 100%;
+					overflow: hidden;
+					transition: 0.5s;
+
+					&:hover {
+						box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+						.pic {
+							img {
+								filter: grayscale(0%);
+								transform: scale(1.1);
+							}
+							p {
+								opacity: 0;
+							}
+						}
+					}
+
+					.pic {
+						display: block;
+						position: relative;
+						overflow: hidden;
+						width: 100%;
+
+						img {
+							width: 100%;
+							filter: grayscale(100%);
+							transition: 0.5s;
+						}
+
+						p {
+							width: 100%;
+							padding: 30px;
+							text-align: center;
+
+							color: #fff;
+							font-size: 18px;
+							text-shadow: 1px 1px 0 $blue;
+
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							opacity: 1;
+							z-index: 3;
+						}
+					}
+
+					.info {
+						display: flex;
+						justify-content: space-evenly;
+						align-items: center;
+
+						padding: 10px;
+						img {
+							width: 30px;
+							height: 30px;
+							border-radius: 50%;
+							margin-right: 20px;
+						}
+
+						span {
+							font-size: 14px;
+							margin-right: 30px;
+							color: #777;
+						}
+
+						i {
+							cursor: pointer;
+							color: #999;
+							font-size: 20px;
+							transition: 0.5s;
+
+							&.on {
+								color: rgb(236, 84, 67);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.gal_pop {
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	padding: 10vh;
+	z-index: 6;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.con {
+		width: 100%;
+		height: 100%;
+		order: 2;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	span {
+		width: 100%;
+		cursor: pointer;
+		font-size: 24px;
+		font-weight: 300;
+		text-align: right;
+		color: #fff;
+		order: 1;
+	}
+}
