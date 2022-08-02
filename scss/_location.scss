@@ -1,0 +1,472 @@
+.location {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+
+	.sub_visual {
+		background: url(../bbimg/bg_lo.jpeg) no-repeat center/cover;
+		background-attachment: fixed;
+	}
+
+	.inner {
+		width: 100%;
+		height: 100%;
+		padding-top: 100px;
+
+		.map_wrap {
+			padding: 0 50px;
+
+			#map {
+				width: 100%;
+				height: 60vh;
+
+				.mark_info {
+					color: $blue;
+					background: rgba(255, 255, 255, 0.8);
+					border: 1px solid #fff;
+					border-radius: 5px;
+					font-size: 14px;
+					text-transform: uppercase;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+					padding: 5px;
+
+					position: relative;
+					top: -13px;
+				}
+			}
+		}
+
+		.wrap {
+			width: 1180px;
+			height: 100%;
+			margin: 0 auto;
+			position: relative;
+
+			h3 {
+				text-align: center;
+				margin: 40px 0;
+			}
+
+			.btns {
+				position: relative;
+				margin-bottom: 100px;
+				.branch {
+					display: flex;
+					justify-content: space-between;
+					border-top: 1px solid $blue;
+					border-bottom: 1px solid $blue;
+					margin: 20px auto;
+					padding: 0 30px;
+					li {
+						width: 150px;
+						height: 40px;
+						text-align: center;
+						transition: 0.5s;
+
+						a {
+							color: $blue;
+							font-weight: 200;
+							line-height: 40px;
+							transition: 0.5s;
+						}
+
+						&.on {
+							background: $blue;
+							a {
+								color: #fff;
+							}
+						}
+					}
+				}
+
+				.allBtn {
+					position: absolute;
+					top: 5px;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 50px;
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+					font-size: 14px;
+					color: $blue;
+					background-color: #efefef;
+					// border: 1px solid #999;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+					border-radius: 10px;
+				}
+			}
+
+			.all_info {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				opacity: 0;
+				transform: translateY(100px);
+				transition: 1s;
+
+				&.on {
+					opacity: 1;
+					transform: translateY(0);
+				}
+
+				&::after {
+					@include floatParent;
+				}
+
+				> div {
+					width: 280px;
+					height: 230px;
+					margin-right: 20px;
+
+					float: left;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					img {
+						width: 100%;
+						object-fit: cover;
+					}
+
+					h4 {
+						font-size: 32px;
+						text-align: center;
+						color: #666;
+						font-weight: 100;
+					}
+				}
+			}
+
+			.lo_info {
+				width: 100%;
+				height: 400px;
+				position: relative;
+				border-bottom: 1px solid #efefef;
+				margin-bottom: 150px;
+
+				.lo_box {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					transform: translateY(100px);
+					transition: 1s;
+
+					display: flex;
+					align-items: center;
+
+					&::after {
+						@include floatParent;
+					}
+
+					&.on {
+						opacity: 1;
+						transform: translateY(0);
+					}
+
+					.img {
+						width: 580px;
+						margin-left: 80px;
+						margin-right: 20px;
+
+						float: left;
+
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+
+					.desc {
+						width: 500px;
+						float: left;
+						padding: 10px 50px;
+
+						h4 {
+							font-size: 32px;
+							font-weight: 100;
+							color: $blue;
+							margin-bottom: 30px;
+						}
+						p {
+							color: #777;
+							font-weight: 300;
+							line-height: 1.5;
+							margin-bottom: 20px;
+							strong {
+								color: #666;
+								font-size: 20px;
+								font-weight: 500;
+								line-height: 2;
+							}
+						}
+					}
+				}
+			}
+
+			.contact_us {
+				width: 100%;
+
+				fieldset {
+					width: 100%;
+					border: none;
+
+					display: flex;
+					justify-content: space-around;
+					padding: 0 10%;
+
+					h4 {
+						width: 50%;
+						color: $blue;
+						font-size: 70px;
+					}
+
+					table {
+						width: 50%;
+						padding: 20px;
+						border: 1px solid $blue;
+						border-radius: 10px;
+						tr {
+							padding: 20px;
+
+							th {
+								width: 30%;
+								color: $blue;
+								font-weight: 200;
+								padding: 10px;
+
+								&:last-child {
+									text-align: right;
+									.send {
+										width: 70px;
+										height: 35px;
+										text-transform: uppercase;
+										border-radius: 5px;
+										border: none;
+										color: #fff;
+										background-color: $blue;
+										outline: none;
+										cursor: pointer;
+										transition: 0.5s;
+
+										&:hover {
+											box-shadow: 2px 2px 5px
+												rgba(0, 0, 0, 0.3);
+										}
+									}
+								}
+							}
+
+							td {
+								width: 70%;
+								padding: 10px;
+								input {
+									width: 90%;
+									height: 35px;
+									border: none;
+									outline: none;
+									color: $blue;
+									border-bottom: 1px solid $blue;
+									padding: 5px;
+								}
+
+								textarea {
+									width: 90%;
+									border: 1px solid $blue;
+									border-radius: 5px;
+									outline: none;
+									color: $blue;
+									padding: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.location {
+		.inner {
+			.wrap {
+				width: 100%;
+				padding: 0 50px;
+
+				.btns {
+					width: 100%;
+					.branch {
+						width: 100%;
+						li {
+							width: 25%;
+						}
+					}
+				}
+
+				.all_info {
+					width: 100%;
+					height: 100%;
+					transform: translateY(50px);
+					padding: 0 50px;
+					> div {
+						width: 49%;
+						height: 230px;
+						margin-right: 2%;
+
+						float: left;
+
+						&:nth-of-type(1) {
+							margin-bottom: 60px;
+						}
+
+						&:nth-of-type(2) {
+							margin-right: 0;
+							margin-bottom: 60px;
+						}
+
+						&:nth-of-type(4) {
+							margin-right: 0;
+						}
+
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+
+				.lo_info {
+					height: 600px;
+					margin-bottom: 100px;
+					padding: 0 50px;
+
+					.lo_box {
+						transform: translateY(50px);
+						.img {
+							width: 49%;
+							margin-left: 0;
+							margin-right: 2%;
+
+							float: left;
+
+							img {
+								width: 100%;
+								height: 100%;
+							}
+						}
+
+						.desc {
+							width: 49%;
+							float: left;
+							padding: 0;
+
+							h4 {
+								font-size: 32px;
+								font-weight: 100;
+								color: $blue;
+								margin-bottom: 30px;
+							}
+							p {
+								color: #777;
+								font-weight: 300;
+								line-height: 1.5;
+								margin-bottom: 20px;
+								strong {
+									color: #666;
+									font-size: 20px;
+									font-weight: 500;
+									line-height: 2;
+								}
+							}
+						}
+					}
+				}
+
+				.contact_us {
+					width: 100%;
+
+					fieldset {
+						width: 100%;
+						border: none;
+
+						display: flex;
+						justify-content: space-around;
+						padding: 0 10%;
+
+						h4 {
+							width: 50%;
+							color: $blue;
+							font-size: 70px;
+						}
+
+						table {
+							width: 50%;
+							padding: 20px;
+							border: 1px solid $blue;
+							border-radius: 10px;
+							tr {
+								padding: 20px;
+
+								th {
+									width: 30%;
+									color: $blue;
+									font-weight: 200;
+									padding: 10px;
+
+									&:last-child {
+										text-align: right;
+										.send {
+											width: 70px;
+											height: 35px;
+											text-transform: uppercase;
+											border-radius: 5px;
+											border: none;
+											color: #fff;
+											background-color: $blue;
+											outline: none;
+											cursor: pointer;
+											transition: 0.5s;
+
+											&:hover {
+												box-shadow: 2px 2px 5px
+													rgba(0, 0, 0, 0.3);
+											}
+										}
+									}
+								}
+
+								td {
+									width: 70%;
+									padding: 10px;
+									input {
+										width: 90%;
+										height: 35px;
+										border: none;
+										outline: none;
+										color: $blue;
+										border-bottom: 1px solid $blue;
+										padding: 5px;
+									}
+
+									textarea {
+										width: 90%;
+										border: 1px solid $blue;
+										border-radius: 5px;
+										outline: none;
+										color: $blue;
+										padding: 5px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -10,6 +10,7 @@
 @import 'youtube.scss';
 @import 'community.scss';
 @import 'gallery.scss';
+@import 'location.scss';
 
 $tablet: 1179px;
 $mobileBig: 768px;
@@ -57,7 +58,7 @@ section {
 #header {
 	width: 100%;
 	height: 100%;
-	overflow-x: hidden;
+	overflow: hidden;
 
 	.inner {
 		width: 1180px;

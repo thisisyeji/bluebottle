@@ -8,8 +8,10 @@
     <title>Blue bottle</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/63a7468b81.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1c4b457b8ba709f91d832276197ffd9e"></script>
     <script src="js/main.js" defer></script>
-    <script src="js/anime.js" defer></script>
+    <script src="js/location.js" defer></script>
 </head>
 
 <body>
@@ -55,14 +57,176 @@
         </div>
     </header>
 
-    <section class="content">
+    <section class="content location">
         <div class="sub_visual">
             <div class="overlay"></div>
             <h1>location</h1>
         </div>
         <div class="inner">
-            <h2>Sub Title <span>서브페이지 제목</span></h2>
-            <!-- 컨텐츠 들어가는 부분 -->
+            <h2>Our cafes</span></h2>
+
+            <div class="map_wrap">
+                <div id="map"></div>
+            </div>
+
+            <div class="wrap">
+                <h3>SEOUL</h3>
+
+                <div class="btns">
+                    <ul class="branch">
+                        <li class="on"><a href="#">Samcheong</a></li>
+                        <li><a href="#">Yeoksam</a></li>
+                        <li><a href="#">Seongsu</a></li>
+                        <li><a href="#">Apgujeong</a></li>
+                    </ul>
+                    <a href="#" class="allBtn">All</a>
+                </div>
+
+                <article class="all_info">
+                    <div>
+                        <img src="./bbimg/img_samcheong.jpeg" alt="samcheong">
+                        <h4>Samcheong</h4>
+                    </div>
+
+                    <div>
+                        <img src="./bbimg/img_yeoksam.jpeg" alt="yeoksam">
+                        <h4>Yeoksam</h4>
+                    </div>
+
+                    <div>
+                        <img src="./bbimg/img_seongsu.jpeg" alt="seongsu">
+                        <h4>Seongsu</h4>
+                    </div>
+
+                    <div>
+                        <img src="./bbimg/img_apgujeong.jpeg" alt="apgujeong">
+                        <h4>Apgujeong</h4>
+                    </div>
+                </article>
+
+                <article class="lo_info">
+                    <div class="lo_box on">
+                        <div class="img">
+                            <img src="./bbimg/img_samcheong.jpeg" alt="samcheong">
+                        </div>
+                        <div class="desc">
+                            <h4>Samcheong</h4>
+                            <p>
+                                <strong>VISIT US</strong> <br>
+                                76 Bukchon-ro 5-gil <br>
+                                Jongno-gu <br>
+                                Seoul, Republic of Korea 03053 <br>
+                            </p>
+                            <p>
+                                <strong>HOURS THIS WEEK</strong> <br>
+                                Mon - Sun: 10am - 8pm <br>
+                                CLOSED Lunar New Year, Chuseok <br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="lo_box">
+                        <div class="img">
+                            <img src="./bbimg/img_yeoksam.jpeg" alt="yeoksam">
+                        </div>
+                        <div class="desc">
+                            <h4>Yeoksam</h4>
+                            <p>
+                                <strong>VISIT US</strong> <br>
+                                129 Teheran-ro <br>
+                                Gangnam-gu <br>
+                                Seoul, Republic of Korea 64914 <br>
+                            </p>
+                            <p>
+                                <strong>HOURS THIS WEEK</strong> <br>
+                                Mon - Sun: 8am - 8pm <br>
+                                CLOSED Lunar New Year, Chuseok <br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="lo_box">
+                        <div class="img">
+                            <img src="./bbimg/img_seongsu.jpeg" alt="seongsu">
+                        </div>
+                        <div class="desc">
+                            <h4>Seongsu</h4>
+                            <p>
+                                <strong>VISIT US</strong> <br>
+                                7 Achasan-ro <br>
+                                Seongdong-gu <br>
+                                Seoul, Republic of Korea 04789 <br>
+                                Ttukseom station — exit #1 <br>
+                            </p>
+                            <p>
+                                <strong>HOURS THIS WEEK</strong> <br>
+                                Mon - Sun: 8am - 8pm <br>
+                                CLOSED Lunar New Year, Chuseok <br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="lo_box">
+                        <div class="img">
+                            <img src="./bbimg/img_apgujeong.jpeg" alt="apgujeong">
+                        </div>
+                        <div class="desc">
+                            <h4>Apgujeong</h4>
+                            <p>
+                                <strong>VISIT US</strong> <br>
+                                854 Nonhyeon-ro <br>
+                                Gangnam-gu <br>
+                                Seoul, Republic of Korea 06022 <br>
+                            </p>
+                            <p>
+                                <strong>HOURS THIS WEEK</strong> <br>
+                                Mon - Fri: 8am - 8pm <br>
+                                Sat, Sun: 9am - 8pm <br>
+                                CLOSED Lunar New Year, Chuseok <br>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <form action="" method="get" class="contact_us">
+                    <fieldset>
+                        <legend class="hidden">contact form</legend>
+
+                        <h4>Contact us</h4>
+
+                        <table>
+                            <caption class="hidden">contact form</caption>
+
+                            <tr>
+                                <th scope="row"><label for="name">Name</label></th>
+                                <td>
+                                    <input type="text" name="name" id="name">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row"><label for="email">E-mail</label></th>
+                                <td>
+                                    <input type="email" name="email" id="email">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row"><label for="message">Message</label></th>
+                                <td>
+                                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th colspan="2">
+                                    <input type="submit" value="send" class="send">
+                                </th>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </section>
 
