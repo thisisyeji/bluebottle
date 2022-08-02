@@ -1556,6 +1556,9 @@ section {
     transform: translateX(0);
   }
 }
+.community {
+  margin-bottom: 0;
+}
 .community .sub_visual {
   background: url(../bbimg/bg_co.jpeg) no-repeat center/cover;
   background-attachment: fixed;
@@ -1564,12 +1567,282 @@ section {
   width: 100%;
   height: 100%;
 }
+.community .inner h2 {
+  transition: 0.5s;
+}
 .community .inner .wrap {
   width: 1180px;
   height: 100%;
   margin: 0 auto;
+  padding-top: 100px;
+}
+.community .inner .wrap ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.community .inner .wrap ul li {
+  width: 33.3333333333%;
+  height: 150px;
+  text-align: center;
+  border: 1px solid #efefef;
+  transform: translateY(0);
+  transition: 0.5s;
+  position: relative;
+  z-index: 3;
+}
+.community .inner .wrap ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 150px;
+  font-style: italic;
+  color: #ddd;
+  background: #fff;
+}
+.community .inner .wrap ul li.on {
+  transform: translateY(-30px);
+}
+.community .inner .wrap ul li.on a {
+  background: #01a1dd;
+  color: #fff;
+}
+.community .inner .wrap article {
+  width: 100%;
+  height: 700px;
+  position: relative;
+}
+.community .inner .wrap article > div {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.community .inner .wrap article > div.on {
+  opacity: 1;
+  top: 0;
+  z-index: 2;
+}
+.community .inner .wrap article > div table {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 50px 0;
+  margin-bottom: 30px;
+}
+.community .inner .wrap article > div table thead {
+  font-size: 18px;
+  height: 40px;
+}
+.community .inner .wrap article > div table thead tr {
+  color: #fff;
+  background: #01a1dd;
+}
+.community .inner .wrap article > div table thead tr th {
+  font-weight: 200;
+  line-height: 30px;
+}
+.community .inner .wrap article > div table thead tr th:nth-of-type(1) {
+  width: 10%;
+}
+.community .inner .wrap article > div table thead tr th:nth-of-type(2) {
+  width: 65%;
+}
+.community .inner .wrap article > div table thead tr th:nth-of-type(3) {
+  width: 10%;
+}
+.community .inner .wrap article > div table thead tr th:nth-of-type(4) {
+  width: 15%;
+}
+.community .inner .wrap article > div table tbody tr {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.community .inner .wrap article > div table tbody tr:hover {
+  background: #efefef;
+}
+.community .inner .wrap article > div table tbody tr:hover a {
+  color: #01a1dd;
+}
+.community .inner .wrap article > div table tbody tr td {
+  font-weight: 200;
+  color: #777;
+  border-bottom: 1px solid #efefef;
+}
+.community .inner .wrap article > div table tbody tr td a {
+  color: #777;
+  transition: 0.5s;
+}
+.community .inner .wrap article > div table tbody tr td:nth-of-type(2) {
+  text-align: left;
+  padding-left: 30px;
+}
+.community .inner .wrap article > div .pagination {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.community .inner .wrap article > div .pagination .prev {
+  color: #01a1dd;
+  margin-right: 30px;
+  font-size: 24px;
+}
+.community .inner .wrap article > div .pagination .numbers a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  color: #01a1dd;
+  transition: 0.5s;
+}
+.community .inner .wrap article > div .pagination .numbers a:hover {
+  border: 1px solid #01a1dd;
+}
+.community .inner .wrap article > div .pagination .numbers a.on {
+  background: #01a1dd;
+  color: #fff;
+}
+.community .inner .wrap article > div .pagination .next {
+  color: #01a1dd;
+  margin-left: 30px;
+  font-size: 24px;
 }
 
+@media screen and (max-width: 1179px) {
+  .community .inner .wrap {
+    width: 100%;
+    padding: 0 20px;
+    padding-top: 100px;
+  }
+  .community .inner .wrap ul li a {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .community {
+    padding: 0;
+  }
+  .community .inner .wrap {
+    width: 100%;
+    padding: 0 20px;
+    padding-top: 100px;
+  }
+  .community .inner .wrap ul li a {
+    font-size: 40px;
+  }
+  .community .inner .wrap article {
+    height: 650px;
+  }
+  .community .inner .wrap article > div {
+    height: 500px;
+    padding: 0;
+  }
+  .community .inner .wrap article > div table {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .community .inner .wrap article > div table thead tr {
+    color: #fff;
+    background: #01a1dd;
+  }
+  .community .inner .wrap article > div table thead tr th:nth-of-type(1) {
+    width: 15%;
+  }
+  .community .inner .wrap article > div table thead tr th:nth-of-type(2) {
+    width: 70%;
+  }
+  .community .inner .wrap article > div table thead tr th:nth-of-type(3) {
+    width: 15%;
+  }
+  .community .inner .wrap article > div table thead tr th:nth-of-type(4) {
+    display: none;
+  }
+  .community .inner .wrap article > div table tbody tr td:nth-of-type(4) {
+    display: none;
+  }
+  .community .inner .wrap article > div .pagination .prev {
+    font-size: 20px;
+  }
+  .community .inner .wrap article > div .pagination .numbers a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #01a1dd;
+    transition: 0.5s;
+  }
+  .community .inner .wrap article > div .pagination .numbers a:nth-of-type(6) {
+    display: none;
+  }
+  .community .inner .wrap article > div .pagination .numbers a:nth-of-type(7) {
+    display: none;
+  }
+  .community .inner .wrap article > div .pagination .numbers a:nth-of-type(8) {
+    display: none;
+  }
+  .community .inner .wrap article > div .pagination .numbers a:nth-of-type(9) {
+    display: none;
+  }
+  .community .inner .wrap article > div .pagination .numbers a:nth-of-type(10) {
+    display: none;
+  }
+  .community .inner .wrap article > div .pagination .next {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .community .inner .wrap {
+    padding-top: 50px;
+  }
+  .community .inner .wrap ul li {
+    height: 100px;
+  }
+  .community .inner .wrap ul li a {
+    font-size: 28px;
+  }
+  .community .inner .wrap article {
+    height: 650px;
+  }
+  .community .inner .wrap article > div {
+    height: 500px;
+    padding: 0;
+  }
+  .community .inner .wrap article > div table {
+    margin-top: 30px;
+  }
+  .community .inner .wrap article > div table thead tr th:nth-of-type(1) {
+    display: none;
+  }
+  .community .inner .wrap article > div table thead tr th:nth-of-type(2) {
+    width: 80%;
+  }
+  .community .inner .wrap article > div table thead tr th:nth-of-type(3) {
+    width: 20%;
+  }
+  .community .inner .wrap article > div table tbody tr td {
+    font-size: 14px;
+  }
+  .community .inner .wrap article > div table tbody tr td:nth-of-type(1) {
+    display: none;
+  }
+  .community .inner .wrap article > div table tbody tr td:nth-of-type(2) {
+    padding-left: 5px;
+  }
+}
 .gallery {
   width: 100%;
   height: 100%;
