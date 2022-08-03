@@ -2532,7 +2532,7 @@ section {
     padding-top: 30px;
   }
   .location .inner .map_wrap #map {
-    height: 60vh;
+    height: 50vh;
   }
   .location .inner .wrap .btns {
     width: 100%;
