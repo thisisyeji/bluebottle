@@ -1,4 +1,4 @@
-// 함수
+/*
 const community = document.querySelector(".community");
 const btns = community.querySelectorAll(".btns li");
 const boxes = community.querySelectorAll("article>div");
@@ -20,13 +20,13 @@ function activation(arr, index) {
     }
     arr[index].classList.add("on");
 }
+*/
 
 
-
-/* class 아직 잘 모르겠음
-window.onload = () => {
+//class 
+window.addEventListener("load", () => {
     new Tab(".community");
-}
+});
 
 
 class Tab {
@@ -47,13 +47,11 @@ class Tab {
                 this.title.innerText = e.target.innerText;
             })
         })
-
-        activation = function (arr, index) {
-            for (let el of arr) {
-                el.classList.remove("on");
-            }
-            arr[index].classList.add("on");
+    }
+    activation = function (arr, index) {
+        for (let el of arr) {
+            el.classList.remove("on");
         }
+        arr[index].classList.add("on");
     }
 }
-*/

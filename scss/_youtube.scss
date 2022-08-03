@@ -211,6 +211,12 @@
 			}
 		}
 	}
+	.you_pop {
+		padding: 5vw;
+		span {
+			font-size: 20px;
+		}
+	}
 }
 
 @media screen and (max-width: $mobile) {
@@ -248,5 +254,9 @@
 				}
 			}
 		}
+	}
+
+	.you_pop {
+		padding: 5px;
 	}
 }
