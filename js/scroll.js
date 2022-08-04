@@ -3,7 +3,7 @@ const scrollBar = document.querySelector('.scroll_bar');
 const lists = scrollBar.querySelectorAll('li');
 const lists_a = Array.from(lists);
 
-let base = -300;
+let base = -500;
 
 let posArr = null;
 

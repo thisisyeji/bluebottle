@@ -3506,6 +3506,7 @@ section h2 {
   transform: translate(-50%, -50%);
   background: #fff;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  z-index: 6;
 }
 #popup .pop_content {
   width: 100%;
