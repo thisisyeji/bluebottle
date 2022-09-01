@@ -136,7 +136,7 @@
 						label {
 							margin-right: 15px;
 							display: block;
-							width: 100%;
+							width: 50%;
 							margin-bottom: 5px;
 						}
 
@@ -276,6 +276,10 @@
 
 @media screen and (max-width: $mobileBig) {
 	.join {
+		.sub_visual {
+			background-attachment: scroll;
+		}
+
 		.inner {
 			#member {
 				width: 95%;

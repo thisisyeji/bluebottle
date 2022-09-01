@@ -483,6 +483,7 @@
 @media screen and (max-width: $mobileBig) {
 	.about {
 		margin-bottom: 0;
+
 		.inner {
 			.intro {
 				width: 90%;
@@ -560,6 +561,10 @@
 
 @media screen and (max-width: $mobile) {
 	.about {
+		.sub_visual {
+			background-attachment: scroll;
+		}
+
 		.inner {
 			article {
 				h3 {

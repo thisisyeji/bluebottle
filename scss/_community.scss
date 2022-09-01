@@ -218,6 +218,10 @@
 	.community {
 		padding: 0;
 
+		.sub_visual {
+			background-attachment: scroll;
+		}
+
 		.inner {
 			.wrap {
 				width: 100%;

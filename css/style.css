@@ -511,6 +511,10 @@ section {
     opacity: 1;
   }
   .content .sub_visual h1 {
+    font-size: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
     margin-left: 0;
     opacity: 1;
   }
@@ -684,7 +688,7 @@ section {
 .join .inner #member fieldset table td label {
   margin-right: 15px;
   display: block;
-  width: 100%;
+  width: 50%;
   margin-bottom: 5px;
 }
 .join .inner #member fieldset table td [type=text],
@@ -791,6 +795,9 @@ section {
   }
 }
 @media screen and (max-width: 768px) {
+  .join .sub_visual {
+    background-attachment: scroll;
+  }
   .join .inner #member {
     width: 95%;
     margin-right: 5%;
@@ -1307,6 +1314,9 @@ section {
   }
 }
 @media screen and (max-width: 539px) {
+  .about .sub_visual {
+    background-attachment: scroll;
+  }
   .about .inner article h3 {
     font-size: 38px;
   }
@@ -1538,6 +1548,9 @@ section {
   }
 }
 @media screen and (max-width: 539px) {
+  .youtube .sub_visual {
+    background-attachment: scroll;
+  }
   .youtube .inner .wrap article {
     display: flex;
     flex-direction: column;
@@ -1741,6 +1754,9 @@ section {
 @media screen and (max-width: 768px) {
   .community {
     padding: 0;
+  }
+  .community .sub_visual {
+    background-attachment: scroll;
   }
   .community .inner .wrap {
     width: 100%;
@@ -2054,6 +2070,9 @@ section {
   }
 }
 @media screen and (max-width: 768px) {
+  .gallery .sub_visual {
+    background-attachment: scroll;
+  }
   .gallery .inner .loading {
     height: 60%;
     margin-top: 50px;
@@ -2444,6 +2463,9 @@ section {
   }
 }
 @media screen and (max-width: 768px) {
+  .location .sub_visual {
+    background-attachment: scroll;
+  }
   .location .inner {
     padding-top: 30px;
   }

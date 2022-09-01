@@ -221,6 +221,9 @@
 
 @media screen and (max-width: $mobile) {
 	.youtube {
+		.sub_visual {
+			background-attachment: scroll;
+		}
 		.inner {
 			.wrap {
 				article {

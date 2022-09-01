@@ -243,6 +243,10 @@
 
 @media screen and(max-width: $mobileBig) {
 	.gallery {
+		.sub_visual {
+			background-attachment: scroll;
+		}
+
 		.inner {
 			.loading {
 				height: 60%;

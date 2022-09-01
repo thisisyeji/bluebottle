@@ -415,6 +415,10 @@
 
 @media screen and (max-width: $mobileBig) {
 	.location {
+		.sub_visual {
+			background-attachment: scroll;
+		}
+
 		.inner {
 			padding-top: 30px;
 
