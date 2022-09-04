@@ -1,4 +1,4 @@
-# 리액트 기업형 웹사이트
+# HTMl 기업형 웹사이트
 
 HTML, CSS, JavaScript로 제작한 개인 포트폴리오용 기업형 웹사이트입니다.
 
@@ -25,7 +25,7 @@ HTML, CSS, JavaScript로 제작한 개인 포트폴리오용 기업형 웹사이
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./bbimg/screenshot.png)
 
 ### Links
 
@@ -35,19 +35,22 @@ HTML, CSS, JavaScript로 제작한 개인 포트폴리오용 기업형 웹사이
 
 ### Built with
 
-- [React](https://reactjs.org/) - JS library
-- SCSS
-- HTML5
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
 
 ### What I learned
 
-- React 기본 활용
-- Redux & Redux-saga
-- 세로 스크롤 이벤트
+- Youtube API, Kakao map API, Flickr API 사용법
+- 쿠키에 날짜 정보를 넣어 하루동안 팝업 안 뜨게 설정
+- offsetTop 값을 이용하여 세로 스크롤 이벤트
 
 ### Reference
 
-- [Acqua di parma](https://www.acquadiparma.com/)
+- [Blue bottle coffee](https://bluebottlecoffee.com/)
+- [Blue bottle coffee KOREA](https://www.bluebottlecoffeekorea.com/)
+- [Blue bottle coffee JAPAN](https://store.bluebottlecoffee.jp/)
 
 ## Author
 
