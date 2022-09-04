@@ -1,4 +1,4 @@
-# HTMl 기업형 웹사이트
+# HTML 기업형 웹사이트
 
 HTML, CSS, JavaScript로 제작한 개인 포트폴리오용 기업형 웹사이트입니다.
 
