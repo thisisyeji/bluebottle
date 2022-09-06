@@ -29,7 +29,7 @@ HTML, CSS, JavaScript로 제작한 개인 포트폴리오용 기업형 웹사이
 
 ### Links
 
-- Live Site URL: [https://yjkim0109.github.io/bluebottle](https://yjkim0109.github.io/bluebottle)
+- Live Site URL: [https://thisisyeji.github.io/bluebottle](https://thisisyeji.github.io/bluebottle)
 
 ## My process
 
