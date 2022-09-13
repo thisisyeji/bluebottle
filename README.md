@@ -1,6 +1,6 @@
 # HTML 기업형 웹사이트
 
-HTML, CSS, JavaScript로 제작한 개인 포트폴리오용 기업형 웹사이트입니다.
+HTML, SCSS, JavaScript로 제작한 개인 포트폴리오용 기업형 웹사이트입니다.
 
 ## Table of contents
 
@@ -36,9 +36,9 @@ HTML, CSS, JavaScript로 제작한 개인 포트폴리오용 기업형 웹사이
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
-- CSS Grid
+- JavaScript
 
 ### What I learned
 
