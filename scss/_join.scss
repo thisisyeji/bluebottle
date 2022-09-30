@@ -44,6 +44,7 @@
 					padding: 20px 40px;
 					margin: 0 5%;
 					margin-bottom: 20px;
+					resize: none;
 				}
 
 				.agreement {
@@ -184,6 +185,7 @@
 							color: #555;
 							padding: 20px;
 							outline: none;
+							resize: none;
 
 							&:focus {
 								border: 1px solid $blue;
