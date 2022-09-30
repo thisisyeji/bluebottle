@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+textarea {
+  resize: none;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -609,6 +613,7 @@ section {
   padding: 20px 40px;
   margin: 0 5%;
   margin-bottom: 20px;
+  resize: none;
 }
 .join .inner #member fieldset .agreement {
   color: #01a1dd;
@@ -730,6 +735,7 @@ section {
   color: #555;
   padding: 20px;
   outline: none;
+  resize: none;
 }
 .join .inner #member fieldset table td textarea#comment:focus {
   border: 1px solid #01a1dd;
@@ -2363,6 +2369,7 @@ section {
   outline: none;
   color: #01a1dd;
   padding: 5px;
+  resize: none;
 }
 
 @media screen and (max-width: 1179px) {
